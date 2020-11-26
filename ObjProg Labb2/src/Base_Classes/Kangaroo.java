@@ -1,4 +1,10 @@
 package Base_Classes;
 
-public class Kangaroo {
+import Uncategorized.IFatigue;
+
+public class Kangaroo implements IFatigue {
+    @Override
+    public Double checkFatigueLevel() {
+        return 0.9;
+    }
 }
