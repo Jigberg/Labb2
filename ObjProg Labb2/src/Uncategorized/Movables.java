@@ -1,9 +1,7 @@
 package Uncategorized;
 
 public class Movables {
-    private double currentSpeed; // The current speed
     private boolean isMovable; // Used to know if it is in a movable state
-    private double maxSpeed;
     private Positionables positionables;
 
     public Movables(double x, double y, Direction direction, double currentSpeed, boolean isMovable, double maxSpeed) {

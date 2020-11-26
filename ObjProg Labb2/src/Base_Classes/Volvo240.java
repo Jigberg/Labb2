@@ -1,7 +1,6 @@
 package Base_Classes;
 
-import Uncategorized.Direction;
-
+import Uncategorized.VehicleProperties;
 import java.awt.*;
 
 /**
@@ -10,22 +9,8 @@ import java.awt.*;
  */
 
 public class Volvo240{
-    private final double trimFactor = 1.25;
-
-    /**
-     * Constructor for class.
-     */
-    public Volvo240() {
-        super(0, 0, Direction.NORTH, 0, true, 100, Color.RED, "Volvo240");
+    VehicleProperties vehicleProperties;
+    public Volvo240(Color color){
+        this.vehicleProperties = new VehicleProperties(200, color, "The Car Transport");
     }
-
-    /**
-     * Calculates the speedfactor.
-     * Uses trimFactor.
-     */
-    @Override
-    public double speedFactor() {
-        return getEnginePower() * 0.01 * trimFactor;
-    }
-
 }
