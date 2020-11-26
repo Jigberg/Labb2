@@ -1,4 +1,4 @@
-package Uncategorized;
+package MovementAbilities;
 
 public enum Direction {
     NORTH,

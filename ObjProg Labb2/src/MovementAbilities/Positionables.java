@@ -1,4 +1,4 @@
-package Uncategorized;
+package MovementAbilities;
 
 public class Positionables{
     private double x; // The X position

@@ -1,7 +1,5 @@
 package Uncategorized;
 
-import Uncategorized.Direction;
-
 import java.awt.*;
 
 /**

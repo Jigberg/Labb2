@@ -3,8 +3,8 @@ package Carriers;
 import Base_Classes.Car_Transport;
 import Base_Classes.Saab95;
 import Base_Classes.Volvo240;
-import Uncategorized.Movables;
-import Uncategorized.Positionables;
+import MovementAbilities.IMovables;
+import MovementAbilities.Positionables;
 
 import java.util.ArrayList;
 
@@ -19,7 +19,7 @@ public class CarTransportCarrier extends Carrier<Car_Transport>{
 
     @Override
     public boolean isLoadable(Object o) {
-        if (getAttachedTo().getDirection() != ((Movables) loadType).getDirection()) { return false; }
+        if (getAttachedTo().getDirection() != ((IMovables) loadType).getDirection()) { return false; }
         if (getAttachedTo().getRamp().getAngle() != 0) { return false; }
         if (getVolume() == getCapacity()) { return false; }
         if (((Vehicle) loadType).getCurrentSpeed() != 0 || getAttachedTo().getCurrentSpeed() != 0) { return false; }
