@@ -1,4 +1,4 @@
 package Base_Classes;
 
-public class Car_Workshop {
+public class Car_Workshop<T> {
 }

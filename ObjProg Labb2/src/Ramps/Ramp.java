@@ -1,7 +1,8 @@
 package Ramps;
-import Positions.*;
 
-public abstract class Ramp<A extends Movables> {
+import Uncategorized.Movables;
+
+public abstract class Ramp<A> {
     private int angle;
     private int maxAngle;
     private int minAngle;

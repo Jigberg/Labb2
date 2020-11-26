@@ -1,6 +1,6 @@
 package Ramps;
 
-import Vehicles.Scania;
+import Base_Classes.Scania;
 
 public class ScaniaRamp extends Ramp{
     public ScaniaRamp(int angle, Scania attachedTo) {

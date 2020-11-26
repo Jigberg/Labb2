@@ -1,8 +1,6 @@
-package Vehicles;
+package Base_Classes;
 
-import Carriers.ICarTransportCarrier;
-import Carriers.IFerryCarrier;
-import Positions.Direction;
+import Uncategorized.Direction;
 
 import java.awt.*;
 
@@ -11,7 +9,7 @@ import java.awt.*;
  * A class for car model Vehicles.Volvo240
  */
 
-public class Volvo240 extends Vehicle implements ICarTransportCarrier, IFerryCarrier{
+public class Volvo240{
     private final double trimFactor = 1.25;
 
     /**
