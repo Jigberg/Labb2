@@ -10,14 +10,12 @@ import Movement.*;
  * A class for car model Vehicles.Volvo240
  */
 
-public class Volvo240{
+public class Volvo240 implements IVehicle{
+    private Movable movable = new Movable(0, 0, Direction.NORTH, speed)
     private Movable movable = new Movable(0, 0, Direction.NORTH, true, true, true);
     private IVehicle IVehicle;
-    private Speed speed = new Speed(0,100,new BasicTrimFactorStrat(1.3, getVehicleProperties()) );
+    private Speed speed = new Speed(0,100,new BasicTrimFactorStrat() );
 
-    public Volvo240(){
-        this.IVehicle = new IVehicle(200, Color.ORANGE, "Volvo240");
-    }
     public void stopEngine(){ getVehicleProperties().stopEngine(speed); }
     public void startEngine(){ getVehicleProperties().startEngine(speed); }
     public void gas(double amount){getVehicleProperties().gas(amount, speed); }

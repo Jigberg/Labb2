@@ -12,6 +12,6 @@ public class States {
 
     public boolean getIsMovable() { return isMovable; }
     public boolean getIsTransportable() { return isTransportable; }
-    public void setMovable(boolean movable) { isMovable = movable; }
-    public void setTransportable(boolean transportable) { isTransportable = transportable; }
+    public void setIsMovable(boolean movable) { isMovable = movable; }
+    public void setIsTransportable(boolean transportable) { isTransportable = transportable; }
 }

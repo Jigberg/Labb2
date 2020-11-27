@@ -7,13 +7,13 @@ public class Movable extends Positionable {
         this.speed = speed;
     }
 
-    public void move(Speed speed){
+    public void move(){
         if(getStates().getIsMovable()) {
             switch (getDirection()) {
-                case NORTH -> sety(gety() + speed.getCurrentSpeed());
-                case EAST -> setx(getx() + speed.getCurrentSpeed());
-                case SOUTH -> sety(gety() - speed.getCurrentSpeed());
-                case WEST -> setx(getx() - speed.getCurrentSpeed());
+                case NORTH -> sety(gety() + getSpeed().getCurrentSpeed());
+                case EAST -> setx(getx() + getSpeed().getCurrentSpeed());
+                case SOUTH -> sety(gety() - getSpeed().getCurrentSpeed());
+                case WEST -> setx(getx() - getSpeed().getCurrentSpeed());
             }
         }
     }
@@ -33,6 +33,6 @@ public class Movable extends Positionable {
             case WEST -> setDirection(Direction.SOUTH);
         }
     }
-    public Speed getSpeed(){ return this.speed; }
+    Speed getSpeed(){ return this.speed; }
 }
 

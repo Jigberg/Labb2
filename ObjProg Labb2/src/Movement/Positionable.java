@@ -12,15 +12,15 @@ public class Positionable {
         this.direction = direction;
         this.states = new States(isMovable, isTransportable, isRotatable);
     }
+    States getStates(){ return this.states; }
     double getx() { return x; }
     double gety() { return y; }
     void setx(double x) { this.x = x; }
     void sety(double y) { this.y = y; }
     Direction getDirection() {return direction; }
-    void setDirection(Direction direction){ this.direction = direction; }
-    States getStates(){ return this.states; }
+    public void setDirection(Direction direction){ this.direction = direction; }
     boolean geIsMovable() { return getStates().getIsMovable(); }
     boolean getIsTransportable() { return getStates().getIsTransportable(); }
-    void setIsMovable(boolean isMovable) { getStates().setMovable(isMovable); }
-    void setIsTransportable(boolean isTransportable) { getStates().setTransportable(isTransportable);}
+    void setIsMovable(boolean isMovable) { getStates().setIsMovable(isMovable); }
+    void setIsTransportable(boolean isTransportable) { getStates().setIsTransportable(isTransportable);}
 }

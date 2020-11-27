@@ -6,6 +6,5 @@ public class TrimFactor {
         this.trimFactor = trimFactor;
     }
 
-
     public Double getEffect(){ return this.trimFactor; }
 }

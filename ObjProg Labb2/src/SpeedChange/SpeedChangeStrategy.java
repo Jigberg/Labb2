@@ -1,10 +1,12 @@
 package SpeedChange;
 
-import Movement.Speed;
+public abstract class SpeedChangeStrategy {
+    private double power;
 
-public class SpeedChangeStrategy {
-    private Speed speed;
+    public SpeedChangeStrategy(){}
+    public abstract Double calculateSpeedChange(Double amount);
 
-    public Double calculateSpeedChange(Double amount){ return getSpeed().getPower()*0.01 + amount; }
-    Speed getSpeed(){ return this.speed; }
+    double getPower(){ return this.power; }
+    public void setPower(double power){ this.power = power; }
+
 }
