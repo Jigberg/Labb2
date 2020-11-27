@@ -1,9 +1,10 @@
 package Movement;
-import FART.Speed;
 
 public class Movable extends Positionable {
-    public Movable(double x, double y, Direction direction, boolean isMovable, boolean isTransportable, boolean isRotatable) {
+    private Speed speed;
+    public Movable(double x, double y, Direction direction, Speed speed, boolean isMovable, boolean isTransportable, boolean isRotatable) {
         super(x, y, direction, isMovable, isTransportable, isRotatable);
+        this.speed = speed;
     }
 
     public void move(Speed speed){
@@ -32,6 +33,6 @@ public class Movable extends Positionable {
             case WEST -> setDirection(Direction.SOUTH);
         }
     }
-
+    public Speed getSpeed(){ return this.speed; }
 }
 

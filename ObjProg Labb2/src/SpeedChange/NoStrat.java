@@ -1,6 +1,6 @@
-package FART;
+package SpeedChange;
 
-public class NoStrat implements SpeedChangeStrategy{
+public class NoStrat extends SpeedChangeStrategy {
     public NoStrat(){}
     @Override
     public Double calculateSpeedChange(Double amount) {

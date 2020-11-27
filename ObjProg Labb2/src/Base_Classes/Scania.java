@@ -1,17 +1,17 @@
 package Base_Classes;
 
-import FART.NoStrat;
-import FART.Speed;
+import SpeedChange.NoStrat;
+import Movement.Speed;
 import Movement.Direction;
 import Movement.Movable;
 import Movement.Positionable;
 import Ramp.*;
-import Uncategorized.VehicleProperties;
+import Uncategorized.IVehicle;
 
 import java.awt.*;
 
 public class Scania implements Movable, IRotatables {
-    VehicleProperties vehicleProperties = new VehicleProperties(300, Color.BLUE, "The Scania");
+    IVehicle IVehicle = new IVehicle(300, Color.BLUE, "The Scania");
     private Positionable positionable = new Positionable(0, 0, Direction.NORTH, true, true);
     private Speed speed = new Speed(0,100,new NoStrat());
     Ramp<Scania> ramp = new ScaniaRamp(0, this);
@@ -21,7 +21,7 @@ public class Scania implements Movable, IRotatables {
     public void startEngine(){ getVehicleProperties().startEngine(speed); }
     public void gas(double amount){getVehicleProperties().gas(amount, speed); }
     public void brake(double amount){getVehicleProperties().brake(amount, speed); }
-    VehicleProperties getVehicleProperties(){ return this.vehicleProperties; }
+    IVehicle getVehicleProperties(){ return this.IVehicle; }
     Speed getSpeed(){ return this.speed; }
     Positionable getPositionables(){ return this.positionable; }
     Ramp<Scania> getRamp(){ return this.ramp; }

@@ -1,6 +1,6 @@
 package Ramp;
 
-import FART.Speed;
+import Movement.Speed;
 
 public abstract class Ramp<A> {
     private int angle;

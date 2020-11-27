@@ -3,12 +3,12 @@ package Carry;
 import Base_Classes.Car_Transport;
 import Base_Classes.Saab95;
 import Base_Classes.Volvo240;
-import FART.Speed;
+import Movement.Speed;
 import Movement.Direction;
 import Movement.Movable;
 import Movement.Positionable;
-import Uncategorized.VehicleProperties;
-import FART.NoStrat;
+import Uncategorized.IVehicle;
+import SpeedChange.NoStrat;
 
 import java.util.ArrayList;
 
@@ -17,7 +17,7 @@ public class CarTransportCarrier extends Carrier<Car_Transport>{
         super(3, new ArrayList<>(), attachedTo);
     }
     private Positionable positionable = new Positionable(0, 0, Direction.NORTH);
-    private VehicleProperties vehicleProperties;
+    private IVehicle IVehicle;
     private Speed speed = new Speed(0,100,new NoStrat());
     
     public void load(Saab95 saab95){ doLoad(saab95); }

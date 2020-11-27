@@ -1,4 +1,4 @@
-package FART;
+package SpeedChange;
 
 public class TrimFactor {
     private Double trimFactor;
