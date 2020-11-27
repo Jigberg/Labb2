@@ -12,6 +12,6 @@ public interface IVehicle {
     void stopEngine();
     void startEngine();
     void gas();
-    void brake()
+    void brake();
 }
 
