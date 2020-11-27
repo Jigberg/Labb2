@@ -1,4 +1,5 @@
 package Uncategorized;
+import FART.*;
 
 import java.awt.*;
 
@@ -24,25 +25,19 @@ public class VehicleProperties{
         this.modelName = modelName;
         this.enginePower = enginePower;
     }
+
     /**
      * Stops the car engine.
      */
-    public void stopEngine() {
-        setCurrentSpeed(0);
-    }
+    public void stopEngine(Speed speed) { speed.setCurrentSpeed(0); }
     /**
      * Starts the car engine.
      */
-    public void startEngine() {
-        setCurrentSpeed(0.1);
+    public void startEngine(Speed speed) {
+        speed.setCurrentSpeed(0.1);
     }
-    public double speedFactor(){ return 0.01; }
-    @Override
-    public double calculateSpeedChange(double amount){ return getCurrentSpeed() + amount * speedFactor(); }
-    @Override
-    public boolean isSpeedChangeInRange(double amount){ return -1.0 < amount && amount < 1.0; }
-    public void gas(double amount) { changeSpeed(amount < 0 ? 0 : amount); }
-    public void brake(double amount) { changeSpeed(-amount); }
+    public void gas(double amount, Speed speed) { speed.changeSpeed(amount < 0 ? 0 : amount); }
+    public void brake(double amount, Speed speed) { speed.changeSpeed(-amount); }
     public double getEnginePower() { return enginePower; }
 }
 
