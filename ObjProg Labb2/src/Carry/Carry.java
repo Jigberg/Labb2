@@ -1,20 +1,20 @@
 package Carry;
 import java.util.List;
 
-public abstract class Carrier<A>{
+public abstract class Carry<A, L>{
     private int capacity;
-    private List<Object> load;
+    private List<L> load;
     private A attachedTo;
 
-    public Carrier(int capacity, List<Object> load, A attachedTo){
+    public Carry(int capacity, List<L> load, A attachedTo){
         this.capacity = capacity;
         this.load = load;
         this.attachedTo = attachedTo;
     }
 
-    public boolean isLoadable(Object o){
+    public boolean isLoadable(L l){
         if(getVolume() == getCapacity()){ return false; }
-        if(getLoad().contains(o)){ return false; }
+        if(getLoad().contains(l)){ return false; }
         return true;
     }
     public boolean isUnloadable(){
@@ -22,7 +22,7 @@ public abstract class Carrier<A>{
         return true;
     }
 
-    public List<Object> getLoad(){ return this.load; }
+    public List<L> getLoad(){ return this.load; }
     public int getCapacity(){ return this.capacity; }
     public int getVolume(){ return getLoad().size(); }
     public A getAttachedTo(){ return this.attachedTo; }

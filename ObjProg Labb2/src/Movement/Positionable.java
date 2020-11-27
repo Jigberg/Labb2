@@ -6,18 +6,18 @@ public class Positionable {
     private Direction direction;
     private final States states;
 
-    public Positionable(double x, double y, Direction direction, boolean isMovable, boolean isTransportable, boolean isRotatable){
+    public Positionable(double x, double y, Direction direction, boolean isMovable, boolean isTransportable, boolean isRotatable, boolean hasSpeed){
         this.x = x;
         this.y = y;
         this.direction = direction;
-        this.states = new States(isMovable, isTransportable, isRotatable);
+        this.states = new States(isMovable, isTransportable, isRotatable, hasSpeed);
     }
-    States getStates(){ return this.states; }
-    double getx() { return x; }
-    double gety() { return y; }
+    public States getStates(){ return this.states; }
+    public double getx() { return x; }
+    public double gety() { return y; }
     void setx(double x) { this.x = x; }
     void sety(double y) { this.y = y; }
-    Direction getDirection() {return direction; }
+    public Direction getDirection() {return direction; }
     public void setDirection(Direction direction){ this.direction = direction; }
     boolean geIsMovable() { return getStates().getIsMovable(); }
     boolean getIsTransportable() { return getStates().getIsTransportable(); }

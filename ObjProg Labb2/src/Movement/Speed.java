@@ -11,7 +11,7 @@ public class Speed {
     private double maxSpeedIncrease;
     private double maxSpeedDecrease;
 
-    public Speed(double currentSpeed, double power, SpeedChangeStrategy strat, double maxForwardSpeed, double maxBackwardsSpeed, double maxSpeedDecrease){
+    public Speed(double currentSpeed, double power, SpeedChangeStrategy strat, double maxForwardSpeed, double maxBackwardsSpeed, double maxSpeedIncrease, double maxSpeedDecrease){
         this.currentSpeed = currentSpeed;
         this.power = power;
         this.strat = strat;

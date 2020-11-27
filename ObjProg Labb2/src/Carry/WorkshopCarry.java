@@ -5,8 +5,8 @@ import Base_Classes.Car_Workshop;
 import java.util.ArrayList;
 
 
-public class WorkshopCarrier<T> extends Carrier<Car_Workshop<T>>{
-    public WorkshopCarrier(Car_Workshop<T> attachedTo){
+public class WorkshopCarry<T> extends Carry<Car_Workshop<T>> {
+    public WorkshopCarry(Car_Workshop<T> attachedTo){
         super(3, new ArrayList<>(), attachedTo);
     }
 
