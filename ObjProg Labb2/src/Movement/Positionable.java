@@ -6,11 +6,11 @@ public class Positionable {
     private Direction direction;
     private final States states;
 
-    public Positionable(double x, double y, Direction direction, boolean isMovable, boolean isTransportable, boolean isRotatable, boolean hasSpeed){
+    public Positionable(double x, double y, Direction direction, boolean isMovable, boolean isTransportable, boolean hasSpeed){
         this.x = x;
         this.y = y;
         this.direction = direction;
-        this.states = new States(isMovable, isTransportable, isRotatable, hasSpeed);
+        this.states = new States(isMovable, isTransportable, hasSpeed);
     }
     public States getStates(){ return this.states; }
     public double getx() { return x; }

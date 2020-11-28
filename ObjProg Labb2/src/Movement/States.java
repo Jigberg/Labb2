@@ -3,13 +3,11 @@ package Movement;
 public class States {
     boolean isMovable;
     boolean isTransportable;
-    boolean isRotatable;
     boolean hasSpeed;
 
-    public States(boolean isMovable, boolean isTransportable, boolean isRotatable, boolean hasSpeed){
+    public States(boolean isMovable, boolean isTransportable, boolean hasSpeed){
         this.isMovable = isMovable;
         this.isTransportable = isTransportable;
-        this.isRotatable = isRotatable;
         this.hasSpeed = hasSpeed;
     }
 

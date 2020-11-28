@@ -2,8 +2,8 @@ package Movement;
 
 public class Movable extends Positionable {
     private Speed speed;
-    public Movable(double x, double y, Direction direction, Speed speed, boolean isMovable, boolean isTransportable, boolean isRotatable) {
-        super(x, y, direction, isMovable, isTransportable, isRotatable);
+    public Movable(double x, double y, Direction direction, Speed speed, boolean isMovable, boolean isTransportable, boolean hasSpeed) {
+        super(x, y, direction, isMovable, isTransportable, hasSpeed);
         this.speed = speed;
     }
 
