@@ -20,34 +20,20 @@ public class Car_TransportCarry extends Carry<Car_Transport> {
     @Override
     public boolean isLoadable(Movable movable){
         if (!movable.getStates().getIsTransportable()) { return false; }
-        if (movable.getStates().getHasSpeed()){ return false; }
-        if (getAttachedTo().getMovable().getStates().getHasSpeed()) { return false; }
+        if (movable.getStates().getCurrentlyHasSpeed()){ return false; }
+        if (getAttachedTo().getMovable().getStates().getCurrentlyHasSpeed()) { return false; }
         if (getAttachedTo().getMovable().getDirection() != movable.getDirection()){ return false; }
-        if (!isRightPosition(movable)){ return false; }
+        if (!isRightPosition(movable, getAttachedTo().getMovable())){ return false; }
         return super.isLoadable(movable);
     }
-    boolean isRightPosition(Movable movable){
-        int range = 3;
-        switch (movable.getDirection()){
-            case NORTH:
-                if(isDistanceInRange(range, getAttachedTo().getMovable().gety(), movable.gety())){ return true; }
-            case EAST:
-                if(isDistanceInRange(range, getAttachedTo().getMovable().getx(), movable.getx())){ return true; }
-            case SOUTH:
-                if(isDistanceInRange(range, getAttachedTo().getMovable().gety(), movable.gety())){ return true; }
-            case WEST:
-                if(isDistanceInRange(range, getAttachedTo().getMovable().getx(), movable.getx())){ return true; }
-        }
-        return false;
-    }
-    boolean isDistanceInRange(int range, double biggerAbs, double smallerAbs){ return Math.abs(biggerAbs) - Math.abs(smallerAbs) < range; }
+
     public void unload(){
         if(isUnloadable()){
             Movable unloaded = getLoad().remove(0);
             unloaded.getStates().setIsTransportable(true);
-            unloaded.getStates().setIsMovable(true);
+            unloaded.getStates().setCanMove(true);
         }
     }
     @Override
-    public boolean isUnloadable(){ return super.isUnloadable() && !getAttachedTo().getMovable().getStates().getHasSpeed(); }
+    public boolean isUnloadable(){ return super.isUnloadable() && !getAttachedTo().getMovable().getStates().getCurrentlyHasSpeed(); }
 }

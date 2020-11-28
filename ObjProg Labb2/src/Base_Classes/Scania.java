@@ -10,29 +10,34 @@ import Uncategorized.IVehicle;
 
 import java.awt.*;
 
-public class Scania implements Movable, IRotatables {
-    IVehicle IVehicle = new IVehicle(300, Color.BLUE, "The Scania");
-    private Positionable positionable = new Positionable(0, 0, Direction.NORTH, true, true);
-    private Speed speed = new Speed(0,100,new NoStrat());
+public class Scania implements IVehicle {
+    private final Movable movable = new Movable(0, 0, Direction.NORTH, true, true, 200, new NoStrat());
+
     Ramp<Scania> ramp = new ScaniaRamp(0, this);
     private boolean isBeingTransported = false;
 
-    public void stopEngine(){ getVehicleProperties().stopEngine(speed); }
-    public void startEngine(){ getVehicleProperties().startEngine(speed); }
-    public void gas(double amount){getVehicleProperties().gas(amount, speed); }
-    public void brake(double amount){getVehicleProperties().brake(amount, speed); }
-    IVehicle getVehicleProperties(){ return this.IVehicle; }
-    Speed getSpeed(){ return this.speed; }
-    Positionable getPositionables(){ return this.positionable; }
     Ramp<Scania> getRamp(){ return this.ramp; }
 
+    public void move(){getMovable().move();}
+
+    public void turnRight(){getMovable().turnRight();}
+
+    public void turnLeft(){getMovable().turnLeft();}
+
     @Override
+    public void stopEngine(){getMovable().setCurrentSpeed(0);}
+    @Override
+    public void startEngine(){getMovable().setCurrentSpeed(0.1);}
+    @Override
+    public void gas(double amount){getMovable().increaseSpeed(amount); }
+    @Override
+    public void brake(double amount){getMovable().decreaseSpeed(amount);}
+
+
+    public Movable getMovable() {return this.movable; }
+
     public boolean getIsMovable() {
         return !isBeingTransported;
     }
 
-    public void move(){ move(getPositionables(), getSpeed()); }
-    public void turnLeft(){turnLeft(positionable);}
-    public void turnRight(){turnRight(positionable);}
-    public void raiseRamp(int angle){ getRamp().raiseRamp(angle, getSpeed());}
 }

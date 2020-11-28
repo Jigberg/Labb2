@@ -16,33 +16,18 @@ public abstract class Ramp<A> {
 
     }
 
-    // java.lang.NullPointerException: Cannot invoke
-    // "Positions.Movables.getCurrentSpeed()" because the return value of "Ramps.Ramp.getAttachedTo()" is null
-
     /**
      * Raises ramp.
      * @param angle to raise platform.
      */
-    public void raiseRamp(int angle, Speed speed){
-        if(speed.getCurrentSpeed()==0) {
-            setAngle(Math.min(raisableAngle(), angle));
-            /*if(!isSecured()){
-                attachedTo.setIsMovable(false);
-            }*/
-        }
-    }
+    abstract void raiseRamp(int angle);
+
     /**
      * Lowers ramp.
      * @param angle to lower platform.
      */
-    public void lowerRamp(int angle, Speed speed) {
-        if(speed.getCurrentSpeed()==0) {
-            setAngle(Math.min(lowerableAngle(), angle));
-            /*if(isSecured()){
-                attachedTo.setIsMovable(true);
-            }*/
-        }
-    }
+    abstract void lowerRamp(int angle) ;
+
     abstract boolean isSecured();
     int raisableAngle(){ return getMaxAngle() - getAngle(); }
     int lowerableAngle(){ return getAngle() - getMinAngle(); }

@@ -1,19 +1,24 @@
 package Movement;
 
-public class Movable extends Positionable {
-    private Speed speed;
-    public Movable(double x, double y, Direction direction, Speed speed, boolean isMovable, boolean isTransportable, boolean hasSpeed) {
-        super(x, y, direction, isMovable, isTransportable, hasSpeed);
-        this.speed = speed;
+import SpeedChange.SpeedChangeStrategy;
+
+public class Movable extends Speed {
+
+    public Movable(double x, double y, Direction direction, boolean isMovable, boolean isTransportable, Double power, SpeedChangeStrategy strat, double maxForwardSpeed, double maxBackwardsSpeed, double maxSpeedIncrease, double maxSpeedDecrease) {
+        super(x, y, direction, isMovable, isTransportable, power, strat, maxForwardSpeed, maxBackwardsSpeed, maxSpeedIncrease, maxSpeedDecrease);
+    }
+    public Movable(double x, double y, Direction direction, boolean isMovable, boolean isTransportable, double power, SpeedChangeStrategy strat) {
+        super(x, y, direction, isMovable, isTransportable, power, strat);
+
     }
 
     public void move(){
-        if(getStates().getIsMovable()) {
+        if(getStates().getCanMove()) {
             switch (getDirection()) {
-                case NORTH -> sety(gety() + getSpeed().getCurrentSpeed());
-                case EAST -> setx(getx() + getSpeed().getCurrentSpeed());
-                case SOUTH -> sety(gety() - getSpeed().getCurrentSpeed());
-                case WEST -> setx(getx() - getSpeed().getCurrentSpeed());
+                case NORTH -> sety(gety() + getCurrentSpeed());
+                case EAST -> setx(getx() + getCurrentSpeed());
+                case SOUTH -> sety(gety() - getCurrentSpeed());
+                case WEST -> setx(getx() - getCurrentSpeed());
             }
         }
     }
@@ -33,6 +38,5 @@ public class Movable extends Positionable {
             case WEST -> setDirection(Direction.SOUTH);
         }
     }
-    Speed getSpeed(){ return this.speed; }
 }
 

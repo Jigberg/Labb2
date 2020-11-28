@@ -12,8 +12,8 @@ import java.awt.*;
 public interface IVehicle {
     void stopEngine();
     void startEngine();
-    void gas();
-    void brake();
-    Movable getMovable();
+    void gas(double amount);
+    void brake(double amount);
+    public Movable getMovable();
 }
 

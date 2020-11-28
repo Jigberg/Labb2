@@ -1,19 +1,20 @@
 package Movement;
 
 public class States {
-    boolean isMovable;
+    boolean canMove;
     boolean isTransportable;
-    boolean hasSpeed;
+    boolean currentlyHasSpeed = false;
 
-    public States(boolean isMovable, boolean isTransportable, boolean hasSpeed){
-        this.isMovable = isMovable;
+    public States(boolean canMove, boolean isTransportable){
+        this.canMove = canMove;
         this.isTransportable = isTransportable;
-        this.hasSpeed = hasSpeed;
     }
 
-    public boolean getIsMovable() { return isMovable; }
+    public boolean getCanMove() { return canMove; }
     public boolean getIsTransportable() { return isTransportable; }
-    public void setIsMovable(boolean movable) { isMovable = movable; }
+    public void setCanMove(boolean movable) { canMove = movable; }
     public void setIsTransportable(boolean transportable) { isTransportable = transportable; }
-    public boolean getHasSpeed() { return this.hasSpeed; }
+    public boolean getCurrentlyHasSpeed() { return this.currentlyHasSpeed; }
+    public void setCurrentlyHasSpeed(boolean currentlyHasSpeed) {this.currentlyHasSpeed = currentlyHasSpeed; }
+
 }
