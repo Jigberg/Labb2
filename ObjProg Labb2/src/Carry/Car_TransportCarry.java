@@ -1,11 +1,7 @@
 package Carry;
 
 import Base_Classes.Car_Transport;
-import Base_Classes.Saab95;
-import Base_Classes.Volvo240;
 import Movement.*;
-import Uncategorized.IVehicle;
-import SpeedChange.NoStrat;
 
 import java.util.ArrayList;
 

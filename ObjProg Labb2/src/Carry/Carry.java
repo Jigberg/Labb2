@@ -1,7 +1,6 @@
 package Carry;
-import Movement.Movable;
-import Uncategorized.IVehicle;
 
+import Movement.Movable;
 import java.util.List;
 
 public abstract class Carry<A>{

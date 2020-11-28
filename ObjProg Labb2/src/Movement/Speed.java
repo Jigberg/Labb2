@@ -6,10 +6,10 @@ public class Speed extends Positionable{
     private double currentSpeed;
     private double power;
     private final SpeedChangeStrategy strat;
-    private double maxForwardSpeed;
-    private double maxBackwardsSpeed;
-    private double maxSpeedIncrease;
-    private double maxSpeedDecrease;
+    private double maxForwardSpeed = 50;
+    private double maxBackwardsSpeed = 50;
+    private double maxSpeedIncrease = 50;
+    private double maxSpeedDecrease = -50;
 
 
     public Speed(double x, double y, Direction direction, boolean isMovable, boolean isTransportable, double power, SpeedChangeStrategy strat, double maxForwardSpeed, double maxBackwardsSpeed, double maxSpeedIncrease, double maxSpeedDecrease){

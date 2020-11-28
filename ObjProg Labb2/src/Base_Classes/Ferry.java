@@ -1,9 +1,21 @@
 package Base_Classes;
 
-import Uncategorized.IVehicle;
+import Carry.FerryCarry;
+import Movement.Direction;
+import SpeedChange.NoStrat;
 
-import java.awt.*;
+public class Ferry extends Vehicle {
 
-public class Ferry {
+    private final FerryCarry carry = new FerryCarry(this);
+
+    public Ferry(){
+        super(0, 0, Direction.NORTH, true, true, 200.0, new NoStrat());
     }
+
+    public void load(Saab95 saab95){ getCarry().load(saab95.getMovable()); }
+    public void load(Volvo240 volvo240){ getCarry().load(volvo240.getMovable()); }
+    public void unload(){ getCarry().unload(); }
+
+    FerryCarry getCarry(){ return this.carry; }
+
 }

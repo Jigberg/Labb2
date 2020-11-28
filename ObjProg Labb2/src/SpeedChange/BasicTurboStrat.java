@@ -1,7 +1,5 @@
 package SpeedChange;
 
-import Uncategorized.IVehicle;
-
 public class BasicTurboStrat extends SpeedChangeStrategy {
     private Turbo turbo;
 

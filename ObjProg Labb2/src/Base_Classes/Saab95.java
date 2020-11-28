@@ -1,30 +1,10 @@
 package Base_Classes;
-
 import SpeedChange.BasicTurboStrat;
 import Movement.Direction;
-import Movement.Movable;
-import Uncategorized.IVehicle;
 
+public class Saab95 extends Vehicle {
+    public Saab95(){
+        super(0, 0, Direction.NORTH, true, true, 200.0, new BasicTurboStrat(1.3));
+    }
 
-import java.awt.*;
-
-public class Saab95 implements IVehicle {
-    private final Movable movable = new Movable(0, 0, Direction.NORTH, true, true, 200, new BasicTurboStrat(1.3));
-
-    public void move(){getMovable().move();}
-
-    public void turnRight(){getMovable().turnRight();}
-
-    public void turnLeft(){getMovable().turnLeft();}
-
-    @Override
-    public void stopEngine(){getMovable().setCurrentSpeed(0);}
-    @Override
-    public void startEngine(){getMovable().setCurrentSpeed(0.1);}
-    @Override
-    public void gas(double amount){getMovable().increaseSpeed(amount); }
-    @Override
-    public void brake(double amount){getMovable().decreaseSpeed(amount);}
-
-    public Movable getMovable() {return this.movable; }
 }

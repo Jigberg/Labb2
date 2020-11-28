@@ -1,4 +1,4 @@
 package Base_Classes;
 
-public class KangarooCub{
+public class KangarooCub extends Kangaroo{
 }

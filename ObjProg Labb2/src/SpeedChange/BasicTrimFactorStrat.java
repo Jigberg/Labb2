@@ -1,9 +1,8 @@
 package SpeedChange;
 
-import Uncategorized.IVehicle;
 
 public class BasicTrimFactorStrat extends SpeedChangeStrategy {
-    private TrimFactor trimFactor;
+    private final TrimFactor trimFactor;
     public BasicTrimFactorStrat(Double trimFactorValue){
         this.trimFactor = new TrimFactor(trimFactorValue);
     }
