@@ -1,4 +1,5 @@
 package Uncategorized;
+import Movement.Movable;
 import Movement.Speed;
 
 import java.awt.*;
@@ -13,5 +14,6 @@ public interface IVehicle {
     void startEngine();
     void gas();
     void brake();
+    Movable getMovable();
 }
 
