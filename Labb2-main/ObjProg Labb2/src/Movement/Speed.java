@@ -39,9 +39,7 @@ public class Speed extends Positionable{
         }else{
             setCurrentSpeed(getMaxForwardSpeed());
         }
-        if(getCurrentSpeed() != 0){
-            getStates().setCurrentlyHasSpeed(true);
-        }
+
     }
     public void decreaseSpeed(double amount){
         double speedDecrease = getStrat().calculateSpeedChange(amount);
@@ -49,9 +47,6 @@ public class Speed extends Positionable{
             setCurrentSpeed(getCurrentSpeed() - speedDecrease);
         }else{
             setCurrentSpeed(-getMaxBackwardsSpeed());
-        }
-        if(getCurrentSpeed() != 0){
-            getStates().setCurrentlyHasSpeed(true);
         }
     }
 
@@ -62,8 +57,14 @@ public class Speed extends Positionable{
     double getMaxForwardSpeed(){ return this.maxForwardSpeed; }
     double getMaxBackwardsSpeed(){ return this.maxBackwardsSpeed; }
     public SpeedChangeStrategy getStrat(){ return this.strat; }
-    public void setStrat(SpeedChangeStrategy strat){ this.strat = strat; }
-    public void setCurrentSpeed(double currentSpeed) { this.currentSpeed = currentSpeed; }
+    public void setStrat(SpeedChangeStrategy strat){
+        this.strat = strat;
+        getStrat().setPower(getPower());
+    }
+    public void setCurrentSpeed(double currentSpeed) {
+        this.currentSpeed = currentSpeed;
+        getStates().setCurrentlyHasSpeed(getCurrentSpeed() != 0);
+    }
     double getMaxSpeedDecrease() { return maxSpeedDecrease; }
     double getMaxSpeedIncrease() { return maxSpeedIncrease; }
 

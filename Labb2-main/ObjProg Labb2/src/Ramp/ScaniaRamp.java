@@ -2,6 +2,8 @@ package Ramp;
 
 import Base_Classes.Scania;
 
+import javax.sound.midi.SysexMessage;
+
 public class ScaniaRamp extends Ramp<Scania>{
     public ScaniaRamp(int angle, Scania attachedTo) {
         super(angle, 70, 0, attachedTo);
@@ -13,7 +15,7 @@ public class ScaniaRamp extends Ramp<Scania>{
      */
     public void raiseRamp(int angle){
         if(!getAttachedTo().getMovable().getStates().getCurrentlyHasSpeed()) {
-            setAngle(Math.min(raisableAngle(), angle));
+            setAngle(getAngle() + Math.min(raisableAngle(), angle));
             if(!isSecured()){
                 getAttachedTo().getMovable().getStates().setCanMove(false);
             }
@@ -26,7 +28,7 @@ public class ScaniaRamp extends Ramp<Scania>{
      */
     public void lowerRamp(int angle) {
         if(!getAttachedTo().getMovable().getStates().getCurrentlyHasSpeed()) {
-            setAngle(Math.min(lowerableAngle(), angle));
+            setAngle(getAngle() - Math.min(lowerableAngle(), angle));
             if(isSecured()){
                 getAttachedTo().getMovable().getStates().setCanMove(true);
             }

@@ -1,6 +1,8 @@
 package SpeedChange;
 
 
+import javax.sound.midi.SysexMessage;
+
 public class BasicTrimFactorStrat extends SpeedChangeStrategy {
     private final TrimFactor trimFactor;
     public BasicTrimFactorStrat(Double trimFactorValue){
@@ -8,7 +10,8 @@ public class BasicTrimFactorStrat extends SpeedChangeStrategy {
     }
 
     @Override
-    public Double calculateSpeedChange(Double amount) { return amount*getPower()*0.01*getTrimFactor().getEffect(); }
+    public Double calculateSpeedChange(Double amount) {
+        return amount*getPower()*0.01*getTrimFactor().getEffect(); }
 
     TrimFactor getTrimFactor(){ return this.trimFactor; }
 }

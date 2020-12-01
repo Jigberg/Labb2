@@ -20,13 +20,13 @@ public abstract class Ramp<A> {
      * Raises ramp.
      * @param angle to raise platform.
      */
-    abstract void raiseRamp(int angle);
+    public abstract void raiseRamp(int angle);
 
     /**
      * Lowers ramp.
      * @param angle to lower platform.
      */
-    abstract void lowerRamp(int angle) ;
+    public abstract void lowerRamp(int angle) ;
 
     abstract boolean isSecured();
     int raisableAngle(){ return getMaxAngle() - getAngle(); }

@@ -13,9 +13,8 @@ public class main {
         volvo.startEngine();
         volvo.gas(10.0);
         System.out.println(volvo.getMovable().getCurrentSpeed());
-        volvo.brake(10.0);
-        System.out.println(volvo.getMovable().getCurrentSpeed());
-
+        volvo.move();
+        System.out.println(volvo.getMovable().getx() + "  " + volvo.getMovable().gety());
     }
 
     void kangaroo(){

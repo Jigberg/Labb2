@@ -37,10 +37,12 @@ public class CarController {
         cc.vehicles.add(new Volvo240());
         cc.vehicles.add(new Saab95());
         cc.vehicles.add(new Scania());
-
+        cc.vehicles.add(new Car_Transport());
 
         // Start a new view and send a reference of self
         cc.frame = new CarView("CarSim 1.0", cc);
+
+        cc.frame.drawPanel.setVehicleList(cc.vehicles);
 
         // Start the timer
         cc.timer.start();
@@ -51,13 +53,12 @@ public class CarController {
     * */
     private class TimerListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
-            for (Vehicle vehicle : vehicles) {
+            for (Vehicle vehicle : getVehicles()) {
+
                 vehicle.move();
                 int x = (int) Math.round(vehicle.getMovable().getx());
                 int y = (int) Math.round(vehicle.getMovable().gety());
-                if(isInFrame(x,y)){
-                    frame.drawPanel.moveit(x, y, vehicle);
-                }else{
+                if(!isInFrame(x,y)) {
                     vehicle.turnRight();
                     vehicle.turnRight();
                 }
@@ -68,11 +69,12 @@ public class CarController {
     }
 
     boolean isInFrame(int x, int y){
-        System.out.println(x + "  " + y);
-        if(x > 800){ return false; }
+        // System.out.println("am I in frame?");
+        if(x > 800-100){ return false; }
         if(x < 0){ return false; }
-        if(y > 560){ return false; }
+        if(y > 560-60){ return false; }
         if(y < 0){ return false;}
+        // System.out.println("in frame!");
         return true;
     }
 
@@ -111,5 +113,21 @@ public class CarController {
         }
     }
 
-    public ArrayList<Vehicle> getVehicles(){return vehicles;}
+    void liftBedButton(){
+        for(Vehicle vehicle : vehicles){
+            if(vehicle instanceof Scania){
+                ((Scania) vehicle).raiseRamp(10);
+            };
+        }
+    }
+
+    void lowerBedButton(){
+        for(Vehicle vehicle : vehicles){
+            if(vehicle instanceof Scania){
+                ((Scania) vehicle).lowerRamp(10);
+            };
+        }
+    }
+
+    public ArrayList<Vehicle> getVehicles(){ return vehicles; }
 }
