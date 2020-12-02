@@ -1,7 +1,5 @@
 package Movement;
 
-import SpeedChange.SpeedChangeStrategy;
-
 public class Movable extends Speed {
 
     public Movable(double x, double y, Direction direction, boolean isMovable, boolean isTransportable, Double power, double maxForwardSpeed, double maxBackwardsSpeed, double maxSpeedIncrease, double maxSpeedDecrease) {

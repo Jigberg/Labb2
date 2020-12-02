@@ -1,13 +1,9 @@
 package Base_Classes;
 import Graphical.DrawPanel;
 import Movement.Movable;
-import Movement.Speed;
-import SpeedChange.NoStrat;
-import SpeedChange.SpeedChangeStrategy;
 import Movement.*;
 
 import javax.imageio.ImageIO;
-import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 

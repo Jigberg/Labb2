@@ -1,6 +1,6 @@
 package SpeedChange;
 
-public class BasicTurboStrat extends SpeedChangeStrategy {
+public class BasicTurboStrat extends CalculateSpeedChange {
     private Turbo turbo;
 
     public BasicTurboStrat(Double turboValue){

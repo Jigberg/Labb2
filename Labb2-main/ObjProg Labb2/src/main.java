@@ -1,11 +1,10 @@
 import Base_Classes.*;
-import Carry.KangarooCarry;
 
 public class main {
     public static void main(String[] args) { (new main()).program(); }
 
     void program(){
-        volvo();
+        kangaroo();
     }
 
     void volvo(){
@@ -22,9 +21,9 @@ public class main {
         kängru.jumpFaster(500000000);
         kängru.move();
         kängru.checkSurroundings();
-        KangarooCub kängruBebis = new KangarooCub();
-        kängru.load(kängruBebis);
-        System.out.println(kängru.getCarry().getLoad());
+        KangarooCub joey = new KangarooCub();
+        kängru.load(joey);
+        System.out.println(kängru.getVolume());
 
     }
 

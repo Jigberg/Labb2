@@ -1,22 +1,22 @@
 package Base_Classes;
 
-import Carry.Car_TransportCarry;
+import Carry.Carry;
 import Movement.Direction;
 import Movement.Movable;
-import Ramp.Car_TransportRamp;
-import SpeedChange.NoStrat;
+import Ramp.*;
+
+import java.util.ArrayList;
 
 public class Car_Transport extends Vehicle {
-    private final Car_TransportCarry carry = new Car_TransportCarry(getMovable());
-    private final Car_TransportRamp ramp = new Car_TransportRamp(0, this);
+    private final Carry carry = new Carry(4, new ArrayList<>());
+    private final Ramp ramp = new Ramp(90, 90, 0);
 
     public Car_Transport(){
         super(0, 0, Direction.NORTH, true, true, 200.0);
     }
 
-    public void load(Saab95 saab95){ getCarry().load(saab95.getMovable()); }
-    public void load(Volvo240 volvo240){ getCarry().load(volvo240.getMovable()); }
-    public void unload(){ getCarry().unload(); }
+    public void load(Saab95 saab95){ doLoad(saab95.getMovable()); }
+    public void load(Volvo240 volvo240){ doLoad(volvo240.getMovable()); }
 
     @Override
     public void move(){
@@ -39,10 +39,57 @@ public class Car_Transport extends Vehicle {
         }
         super.turnLeft();
     }
-    public void raiseRamp(int angle){ getRamp().raiseRamp(angle); }
-    public void lowerRamp(int angle){ getRamp().lowerRamp(angle); }
+    private Carry getCarry(){ return this.carry; }
+    private Ramp getRamp(){ return this.ramp; }
 
-    private Car_TransportCarry getCarry(){ return this.carry; }
-    private Car_TransportRamp getRamp(){ return this.ramp; }
 
+    private void doLoad(Movable movable){ if(isLoadable(movable)){getCarry().getLoad().add(0, movable); }}
+
+    private boolean isLoadable(Movable movable){
+        if (!movable.getStates().getIsTransportable()) { return false; }
+        if (movable.getStates().getCurrentlyHasSpeed()){ return false; }
+        if (getMovable().getStates().getCurrentlyHasSpeed()) { return false; }
+        if (getMovable().getDirection() != movable.getDirection()){ return false; }
+        if (!getCarry().isRightPosition(movable, getMovable())){ return false; }
+        return getCarry().isLoadable(movable);
+    }
+
+    public void unload(){
+        if(isUnloadable()){
+            Movable unloaded = getCarry().getLoad().remove(0);
+            unloaded.getStates().setIsTransportable(true);
+            unloaded.getStates().setCanMove(true);
+        }
+    }
+    public boolean isUnloadable(){ return getCarry().isUnloadable() && !getMovable().getStates().getCurrentlyHasSpeed(); }
+
+
+    /**
+     * Raises ramp.
+     * @param angle to raise platform.
+     */
+    public void raiseRamp(int angle){
+        if(!getMovable().getStates().getCurrentlyHasSpeed()) {
+            getRamp().setAngle(Math.min(getRamp().raisableAngle(), angle));
+            if(!isSecured()){
+                getMovable().getStates().setCanMove(false);
+            }
+        }
+    }
+
+    /**
+     * Lowers ramp.
+     * @param angle to lower platform.
+     */
+    public void lowerRamp(int angle) {
+        if(!getMovable().getStates().getCurrentlyHasSpeed()) {
+            getRamp().setAngle(Math.min(getRamp().lowerableAngle(), angle));
+            if(isSecured()){
+                getMovable().getStates().setCanMove(true);
+            }
+        }
+    }
+
+    boolean isSecured() { return getRamp().getAngle() == getRamp().getMaxAngle(); }
 }
+

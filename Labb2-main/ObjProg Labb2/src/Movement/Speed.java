@@ -1,12 +1,12 @@
 package Movement;
 
 import SpeedChange.NoStrat;
-import SpeedChange.SpeedChangeStrategy;
+import SpeedChange.CalculateSpeedChange;
 
 public abstract class Speed extends Positionable{
     private double currentSpeed;
     private double power;
-    private SpeedChangeStrategy strat;
+    private CalculateSpeedChange strat;
     private double maxForwardSpeed = 50;
     private double maxBackwardsSpeed = 50;
     private double maxSpeedIncrease = 50;
@@ -56,8 +56,8 @@ public abstract class Speed extends Positionable{
     public double getCurrentSpeed() { return currentSpeed; }
     double getMaxForwardSpeed(){ return this.maxForwardSpeed; }
     double getMaxBackwardsSpeed(){ return this.maxBackwardsSpeed; }
-    public SpeedChangeStrategy getStrat(){ return this.strat; }
-    public void setStrat(SpeedChangeStrategy strat){
+    public CalculateSpeedChange getStrat(){ return this.strat; }
+    public void setStrat(CalculateSpeedChange strat){
         this.strat = strat;
         getStrat().setPower(getPower());
     }

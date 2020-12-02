@@ -3,15 +3,32 @@ package Carry;
 import Movement.Movable;
 import java.util.List;
 
-public abstract class Carry{
+public class Carry{
     private int capacity;
     private List<Movable> load;
-    private Movable attachedTo;
 
-    public Carry(int capacity, List<Movable> load, Movable attachedTo){
+    public Carry(int capacity, List<Movable> load){
         this.capacity = capacity;
         this.load = load;
-        this.attachedTo = attachedTo;
+    }
+
+    public void loadInFront(Movable movable){ if(isLoadable(movable)){getLoad().add(0, movable); }}
+    public void loadInBack(Movable movable){ if(isLoadable(movable)){getLoad().add(movable); }}
+
+    public void unloadFront(){
+        if(isUnloadable()){
+            Movable unloaded = getLoad().remove(0);
+            unloaded.getStates().setIsTransportable(true);
+            unloaded.getStates().setCanMove(true);
+        }
+    }
+
+    public void unloadBack(){
+        if(isUnloadable()){
+            Movable unloaded = getLoad().remove(getVolume());
+            unloaded.getStates().setIsTransportable(true);
+            unloaded.getStates().setCanMove(true);
+        }
     }
 
     public boolean isLoadable(Movable movable){
@@ -24,7 +41,7 @@ public abstract class Carry{
         return true;
     }
 
-    boolean isRightPosition(Movable movable, Movable attachedMovable){
+    public boolean isRightPosition(Movable movable, Movable attachedMovable){
         int range = 3;
         switch (movable.getDirection()){
             case NORTH:
@@ -38,11 +55,11 @@ public abstract class Carry{
         }
         return false;
     }
-    boolean isDistanceInRange(int range, double biggerAbs, double smallerAbs){ return Math.abs(biggerAbs) - Math.abs(smallerAbs) < range; }
+    public boolean isDistanceInRange(int range, double biggerAbs, double smallerAbs){ return Math.abs(biggerAbs) - Math.abs(smallerAbs) < range; }
 
     public List<Movable> getLoad(){ return this.load; }
     public int getCapacity(){ return this.capacity; }
     public int getVolume(){ return getLoad().size(); }
-    public Movable getAttachedTo(){ return this.attachedTo; }
+//    public Movable getAttachedTo(){ return this.attachedTo; }
 
 }

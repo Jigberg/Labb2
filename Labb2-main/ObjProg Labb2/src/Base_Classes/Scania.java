@@ -30,14 +30,39 @@ public class Scania extends Vehicle {
         }
     }
 
-    public void raiseRamp(int angle){ getRamp().raiseRamp(angle); System.out.println("raising ramp!" + "  " + getRamp().getAngle()); }
-    public void lowerRamp(int angle){ getRamp().lowerRamp(angle); System.out.println("lowering ramp!" + "  " + getRamp().getAngle());}
+    Ramp ramp = new Ramp(0, 70, 0);
 
-    ScaniaRamp ramp = new ScaniaRamp(0, this);
+    /**
+     * Raises ramp.
+     * @param angle to raise platform.
+     */
+    public void raiseRamp(int angle){
+        if(!getMovable().getStates().getCurrentlyHasSpeed()) {
+            getRamp().setAngle(getRamp().getAngle() + Math.min(getRamp().raisableAngle(), angle));
+            if(!isSecured()){
+                getMovable().getStates().setCanMove(false);
+            }
+        }
+    }
+
+    /**
+     * Lowers ramp.
+     * @param angle to lower platform.
+     */
+    public void lowerRamp(int angle) {
+        if(!getMovable().getStates().getCurrentlyHasSpeed()) {
+            getRamp().setAngle(getRamp().getAngle() - Math.min(getRamp().lowerableAngle(), angle));
+            if(isSecured()){
+                getMovable().getStates().setCanMove(true);
+            }
+        }
+    }
+
+    boolean isSecured() { return getRamp().getAngle() == getRamp().getMinAngle(); }
+
     private boolean isBeingTransported = false;
-    ScaniaRamp getRamp(){ return this.ramp; }
+    Ramp getRamp(){ return this.ramp; }
     public boolean getIsMovable() { return !isBeingTransported; }
     public BufferedImage getImage(){return image; }
-
 
 }

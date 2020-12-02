@@ -1,6 +1,6 @@
 package SpeedChange;
 
-public abstract class SpeedChangeStrategy {
+public abstract class CalculateSpeedChange {
     private double power;
 
     public abstract Double calculateSpeedChange(Double amount);
