@@ -6,7 +6,7 @@ import SpeedChange.NoStrat;
 
 public class Ferry extends Vehicle {
 
-    private final FerryCarry carry = new FerryCarry(this);
+    private final FerryCarry carry = new FerryCarry(getMovable());
 
     public Ferry(){
         super(0, 0, Direction.NORTH, true, true, 200.0);

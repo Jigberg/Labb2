@@ -2,14 +2,15 @@ package Base_Classes;
 
 import Carry.Vehicle_WorkshopCarry;
 import Movement.Direction;
+import Movement.Movable;
 import Movement.Positionable;
 
 public class Vehicle_Workshop<T extends Vehicle> {
     private final Positionable positionable = new Positionable(0, 0, Direction.NORTH, false, false);
-    private final Vehicle_WorkshopCarry carry = new Vehicle_WorkshopCarry(this);
+//     private final Vehicle_WorkshopCarry carry = new Vehicle_WorkshopCarry(new Movable());
 
-    public void load(T t){ getCarry().load(t.getMovable());}
-    public void unload(T t){ getCarry().unload(t.getMovable()); }
+//    public void load(T t){ getCarry().load(t.getMovable());}
+//    public void unload(T t){ getCarry().unload(t.getMovable()); }
 
-    public Vehicle_WorkshopCarry getCarry() { return carry; }
+    // public Vehicle_WorkshopCarry getCarry() { return carry; }
 }

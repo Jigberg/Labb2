@@ -6,8 +6,8 @@ import Movement.Movable;
 import java.util.ArrayList;
 
 
-public class Vehicle_WorkshopCarry extends Carry<Vehicle_Workshop<?>> {
-    public Vehicle_WorkshopCarry(Vehicle_Workshop<?> attachedTo){
+public class Vehicle_WorkshopCarry extends Carry {
+    public Vehicle_WorkshopCarry(Movable attachedTo){
         super(3, new ArrayList<>(), attachedTo);
     }
 

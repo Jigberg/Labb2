@@ -5,8 +5,8 @@ import Movement.Movable;
 
 import java.util.Stack;
 
-public class KangarooCarry extends Carry<Kangaroo> {
-    public KangarooCarry(Kangaroo attachedTo) {
+public class KangarooCarry extends Carry {
+    public KangarooCarry(Movable attachedTo) {
         super(2, new Stack<>(), attachedTo);
     }
 

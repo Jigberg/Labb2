@@ -58,10 +58,7 @@ public abstract class Vehicle {
         if(0 <= amount && amount <= 1){ getMovable().decreaseSpeed(amount); }
         else if(amount > 1){getMovable().decreaseSpeed(1);}
     }
-
     public Movable getMovable(){return movable;}
-    public BufferedImage getImage(){
-        return image;
-    }
+    public BufferedImage getImage(){ return image; }
 }
 

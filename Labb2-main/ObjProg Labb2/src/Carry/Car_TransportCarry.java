@@ -5,9 +5,9 @@ import Movement.*;
 
 import java.util.ArrayList;
 
-public class Car_TransportCarry extends Carry<Car_Transport> {
+public class Car_TransportCarry extends Carry {
 
-    public Car_TransportCarry(Car_Transport attachedTo) {
+    public Car_TransportCarry(Movable attachedTo) {
         super(3, new ArrayList<>(), attachedTo);
     }
 
@@ -17,9 +17,9 @@ public class Car_TransportCarry extends Carry<Car_Transport> {
     public boolean isLoadable(Movable movable){
         if (!movable.getStates().getIsTransportable()) { return false; }
         if (movable.getStates().getCurrentlyHasSpeed()){ return false; }
-        if (getAttachedTo().getMovable().getStates().getCurrentlyHasSpeed()) { return false; }
-        if (getAttachedTo().getMovable().getDirection() != movable.getDirection()){ return false; }
-        if (!isRightPosition(movable, getAttachedTo().getMovable())){ return false; }
+        if (getAttachedTo().getStates().getCurrentlyHasSpeed()) { return false; }
+        if (getAttachedTo().getDirection() != movable.getDirection()){ return false; }
+        if (!isRightPosition(movable, getAttachedTo())){ return false; }
         return super.isLoadable(movable);
     }
 
@@ -31,5 +31,5 @@ public class Car_TransportCarry extends Carry<Car_Transport> {
         }
     }
     @Override
-    public boolean isUnloadable(){ return super.isUnloadable() && !getAttachedTo().getMovable().getStates().getCurrentlyHasSpeed(); }
+    public boolean isUnloadable(){ return super.isUnloadable() && !getAttachedTo().getStates().getCurrentlyHasSpeed(); }
 }

@@ -6,7 +6,7 @@ import Movement.Movable;
 import SpeedChange.NoStrat;
 
 public class Kangaroo{
-    private final KangarooCarry carry = new KangarooCarry(this);
+    private final KangarooCarry carry = new KangarooCarry(getMovable());
     private final Movable movable;
 
     public Kangaroo (){

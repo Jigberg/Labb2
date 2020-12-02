@@ -3,7 +3,7 @@ package Movement;
 import SpeedChange.NoStrat;
 import SpeedChange.SpeedChangeStrategy;
 
-public class Speed extends Positionable{
+public abstract class Speed extends Positionable{
     private double currentSpeed;
     private double power;
     private SpeedChangeStrategy strat;

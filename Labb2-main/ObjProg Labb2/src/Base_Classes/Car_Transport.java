@@ -7,7 +7,7 @@ import Ramp.Car_TransportRamp;
 import SpeedChange.NoStrat;
 
 public class Car_Transport extends Vehicle {
-    private final Car_TransportCarry carry = new Car_TransportCarry(this);
+    private final Car_TransportCarry carry = new Car_TransportCarry(getMovable());
     private final Car_TransportRamp ramp = new Car_TransportRamp(0, this);
 
     public Car_Transport(){
