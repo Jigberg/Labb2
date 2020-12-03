@@ -26,50 +26,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8e4e1559-3f44-49f3-a750-412b025dc411" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/junit_junit_4_13_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ObjProg Labb2/src/Graphical/CarFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ObjProg Labb2/src/Graphical/CarSim.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ObjProg Labb2/src/Graphical/Frame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Labb2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Labb2.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Base_Classes/Car_Transport.class" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Base_Classes/Car_Transport.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Base_Classes/Ferry.class" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Base_Classes/Ferry.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Base_Classes/Kangaroo.class" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Base_Classes/Kangaroo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Base_Classes/KangarooCub.class" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Base_Classes/KangarooCub.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Base_Classes/Saab95.class" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Base_Classes/Saab95.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Base_Classes/Scania.class" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Base_Classes/Scania.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Base_Classes/Vehicle.class" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Base_Classes/Vehicle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Base_Classes/Vehicle_Workshop.class" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Base_Classes/Vehicle_Workshop.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Base_Classes/Volvo240.class" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Base_Classes/Volvo240.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Base_Classes/WallabyCub.class" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Base_Classes/WallabyCub.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Graphical/CarController$TimerListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Graphical/CarController$TimerListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Graphical/CarController.class" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Graphical/CarController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Graphical/CarView$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Graphical/CarView$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Graphical/CarView$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Graphical/CarView$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Graphical/CarView$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Graphical/CarView$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Graphical/CarView$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Graphical/CarView$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Graphical/CarView$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Graphical/CarView$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Graphical/CarView$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Graphical/CarView$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Graphical/CarView$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Graphical/CarView$7.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Graphical/CarView$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Graphical/CarView$8.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Graphical/CarView.class" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Graphical/CarView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Movement/Movable$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Movement/Movable$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Movement/Movable.class" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Movement/Movable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Movement/Speed.class" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Movement/Speed.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/SpeedChange/BasicTrimFactorStrat.class" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/SpeedChange/BasicTrimFactorStrat.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/SpeedChange/BasicTurboStrat.class" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/SpeedChange/BasicTurboStrat.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/SpeedChange/NoStrat.class" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/SpeedChange/NoStrat.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/SpeedChange/Turbo.class" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/SpeedChange/Turbo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/src/Base_Classes/Saab95.java" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/src/Base_Classes/Saab95.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/src/Base_Classes/Scania.java" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/src/Base_Classes/Scania.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/src/Base_Classes/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/src/Base_Classes/Vehicle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/src/Base_Classes/Volvo240.java" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/src/Base_Classes/Volvo240.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ObjProg Labb2/src/Graphical/CarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/src/Graphical/CarController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/src/Graphical/CarView.java" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/src/Graphical/FrameButtons.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/src/Graphical/DrawPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/src/Graphical/FrameDrawPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Labb2/Graphical/pics/Saab95.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Labb2/Graphical/pics/Scania.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Labb2/Graphical/pics/Volvo240.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/src/Graphical/Frame.java" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/src/Graphical/Frame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,10 +105,10 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="618" y="366" width="684" height="329" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1606996321231">
+    <state x="618" y="366" width="684" height="329" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1607009372325">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="618" y="366" width="684" height="329" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1050@0.0.1920.1050" timestamp="1606996321231" />
+    <state x="618" y="366" width="684" height="329" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1050@0.0.1920.1050" timestamp="1607009372325" />
     <state x="583" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1607008361982">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>

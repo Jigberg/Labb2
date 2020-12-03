@@ -100,5 +100,5 @@ public class CarController {
         }
     }
 
-    public ArrayList<Vehicle> getVehicles(){ return vehicles; }
+    public List<Vehicle> getVehicles(){ return vehicles; }
 }
