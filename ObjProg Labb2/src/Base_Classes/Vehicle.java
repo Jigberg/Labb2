@@ -1,6 +1,5 @@
 package Base_Classes;
 import Graphical.DrawPanel;
-import Movement.Movable;
 import Movement.*;
 
 import javax.imageio.ImageIO;

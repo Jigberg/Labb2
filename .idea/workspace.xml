@@ -1,11 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8e4e1559-3f44-49f3-a750-412b025dc411" name="Default Changelist" comment="" />
+    <list default="true" id="8e4e1559-3f44-49f3-a750-412b025dc411" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ObjProg Labb2/src/SpeedChange/SpeedChangeStrat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Labb2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Labb2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Base_Classes/Car_Transport.class" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Base_Classes/Car_Transport.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Base_Classes/Ferry.class" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Base_Classes/Ferry.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Base_Classes/Kangaroo.class" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Base_Classes/Kangaroo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Base_Classes/KangarooCub.class" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Base_Classes/KangarooCub.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Base_Classes/Saab95.class" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Base_Classes/Saab95.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Base_Classes/Scania.class" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Base_Classes/Scania.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Base_Classes/Vehicle.class" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Base_Classes/Vehicle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Base_Classes/Vehicle_Workshop.class" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Base_Classes/Vehicle_Workshop.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Base_Classes/Volvo240.class" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Base_Classes/Volvo240.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Base_Classes/WallabyCub.class" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Base_Classes/WallabyCub.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Carry/Carry$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Carry/Carry$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Carry/Carry.class" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Carry/Carry.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Graphical/CarController$TimerListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Graphical/CarController$TimerListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Graphical/CarController.class" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Graphical/CarController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Graphical/CarView$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Graphical/CarView$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Graphical/CarView$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Graphical/CarView$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Graphical/CarView$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Graphical/CarView$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Graphical/CarView$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Graphical/CarView$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Graphical/CarView$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Graphical/CarView$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Graphical/CarView$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Graphical/CarView$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Graphical/CarView$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Graphical/CarView$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Graphical/CarView$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Graphical/CarView$8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Graphical/CarView.class" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Graphical/CarView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Graphical/DrawPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Graphical/DrawPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Movement/Direction.class" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Movement/Direction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Movement/Movable$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Movement/Movable$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Movement/Movable.class" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Movement/Movable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Movement/Positionable.class" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Movement/Positionable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Movement/Speed.class" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Movement/Speed.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Movement/States.class" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Movement/States.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Ramp/Ramp.class" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Ramp/Ramp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/SpeedChange/BasicTrimFactorStrat.class" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/SpeedChange/BasicTrimFactorStrat.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/SpeedChange/BasicTurboStrat.class" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/SpeedChange/BasicTurboStrat.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/SpeedChange/NoStrat.class" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/SpeedChange/NoStrat.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/SpeedChange/TrimFactor.class" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/SpeedChange/TrimFactor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/SpeedChange/Turbo.class" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/SpeedChange/Turbo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/out/test/Labb2/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/out/test/Labb2/Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/out/test/Labb2/TestMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/out/test/Labb2/TestMain.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/src/Base_Classes/Saab95.java" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/src/Base_Classes/Saab95.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/src/Base_Classes/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/src/Base_Classes/Vehicle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/src/Base_Classes/Volvo240.java" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/src/Base_Classes/Volvo240.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/src/Movement/Positionable.java" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/src/Movement/Positionable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/src/Movement/Speed.java" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/src/Movement/Speed.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/src/SpeedChange/BasicTrimFactorStrat.java" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/src/SpeedChange/BasicTrimFactorStrat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/src/SpeedChange/BasicTurboStrat.java" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/src/SpeedChange/BasicTurboStrat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/src/SpeedChange/CalculateSpeedChange.java" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/src/SpeedChange/CalculateSpeedChangeStrat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/src/SpeedChange/NoStrat.java" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/src/SpeedChange/NoStrat.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -24,7 +85,11 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -38,9 +103,14 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="716" y="261" key="FileChooserDialogImpl" timestamp="1606814011393">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="712" y="264" key="FileChooserDialogImpl" timestamp="1606980964473">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="716" y="261" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1606814011393" />
+    <state x="712" y="264" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1606980964473" />
+    <state x="312" y="0" key="SettingsEditor" timestamp="1606980982555">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="312" y="0" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1606980982555" />
   </component>
 </project>

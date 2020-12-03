@@ -3,7 +3,6 @@ package Base_Classes;
 import Graphical.DrawPanel;
 import SpeedChange.*;
 import Movement.*;
-
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
@@ -17,7 +16,7 @@ public class Volvo240 extends Vehicle {
 
     public Volvo240(){
         super(0, 0, Direction.NORTH, true, true, 200.0);
-        getMovable().setStrat(new BasicTrimFactorStrat(1.25));
+        getMovable().setStrat(getMovable().stratFactory(SpeedChangeStrat.BASIC_TRIMFACTOR_STRAT, 1.25));
 
         try {
             // You can remove the "pics" part if running outside of IntelliJ and

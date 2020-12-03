@@ -1,5 +1,4 @@
 package Movement;
-
 public class Positionable {
     private double x; // The X position
     private double y; // The Y position

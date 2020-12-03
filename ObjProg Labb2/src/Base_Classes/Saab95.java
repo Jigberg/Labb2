@@ -8,12 +8,11 @@ import java.awt.image.BufferedImage;
 import java.io.IOException;
 
 public class Saab95 extends Vehicle {
-    BasicTurboStrat basicTurboStrat;
+    BasicTurboStrat basicTurboStrat; // this is bad. we don't want an instance of this.
 
     public Saab95(){
         super(200, 0, Direction.NORTH, true, true, 200.0);
-        this.basicTurboStrat = new BasicTurboStrat(10.0);
-        getMovable().setStrat(basicTurboStrat);
+        getMovable().setStrat(getMovable().stratFactory(SpeedChangeStrat.BASIC_TURBO_STRAT, 10.0));
 
         try {
             // You can remove the "pics" part if running outside of IntelliJ and

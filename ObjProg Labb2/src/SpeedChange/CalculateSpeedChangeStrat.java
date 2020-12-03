@@ -1,6 +1,6 @@
 package SpeedChange;
 
-public abstract class CalculateSpeedChange {
+public abstract class CalculateSpeedChangeStrat {
     private double power;
 
     public abstract Double calculateSpeedChange(Double amount);

@@ -1,12 +1,11 @@
 package Movement;
 
-import SpeedChange.NoStrat;
-import SpeedChange.CalculateSpeedChange;
+import SpeedChange.*;
 
 public abstract class Speed extends Positionable{
     private double currentSpeed;
     private double power;
-    private CalculateSpeedChange strat;
+    private CalculateSpeedChangeStrat strat;
     private double maxForwardSpeed = 50;
     private double maxBackwardsSpeed = 50;
     private double maxSpeedIncrease = 50;
@@ -28,8 +27,8 @@ public abstract class Speed extends Positionable{
         super(x, y, direction, isMovable, isTransportable);
         this.currentSpeed = 0;
         this.power = power;
-        this.strat = new NoStrat();
-        this.strat.setPower(power);
+        setStrat(new NoStrat());
+        getStrat().setPower(power);
     }
 
     public void increaseSpeed(double amount){
@@ -56,10 +55,17 @@ public abstract class Speed extends Positionable{
     public double getCurrentSpeed() { return currentSpeed; }
     double getMaxForwardSpeed(){ return this.maxForwardSpeed; }
     double getMaxBackwardsSpeed(){ return this.maxBackwardsSpeed; }
-    public CalculateSpeedChange getStrat(){ return this.strat; }
-    public void setStrat(CalculateSpeedChange strat){
+    public CalculateSpeedChangeStrat getStrat(){ return this.strat; }
+    public void setStrat(CalculateSpeedChangeStrat strat){
         this.strat = strat;
         getStrat().setPower(getPower());
+    }
+    public CalculateSpeedChangeStrat stratFactory(SpeedChangeStrat strat, double modifierValue) {
+        return switch (strat) {
+            case NO_STRAT -> new NoStrat();
+            case BASIC_TURBO_STRAT -> new BasicTurboStrat(modifierValue);
+            case BASIC_TRIMFACTOR_STRAT -> new BasicTrimFactorStrat(modifierValue);
+        };
     }
     public void setCurrentSpeed(double currentSpeed) {
         this.currentSpeed = currentSpeed;
