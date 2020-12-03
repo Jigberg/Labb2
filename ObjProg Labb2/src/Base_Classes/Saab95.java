@@ -1,5 +1,5 @@
 package Base_Classes;
-import Graphical.DrawPanel;
+import Graphical.FrameDrawPanel;
 import SpeedChange.*;
 import Movement.Direction;
 
@@ -21,7 +21,7 @@ public class Saab95 extends Vehicle {
             // Rememember to rightclick src New -> Package -> name: pics -> MOVE *.jpg to pics.
             // if you are starting in IntelliJ.
 
-            this.image = ImageIO.read(DrawPanel.class.getResourceAsStream("pics/Saab95.jpg"));
+            this.image = ImageIO.read(FrameDrawPanel.class.getResourceAsStream("pics/Saab95.jpg"));
         } catch (IOException ex)
         {
             ex.printStackTrace();

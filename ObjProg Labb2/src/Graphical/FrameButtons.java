@@ -1,9 +1,5 @@
 package Graphical;
 
-import Base_Classes.Saab95;
-import Base_Classes.Scania;
-import Base_Classes.Vehicle;
-
 import javax.swing.*;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
@@ -19,14 +15,14 @@ import java.awt.event.ActionListener;
  * TODO: Write more actionListeners and wire the rest of the buttons
  **/
 
-public class CarView extends JFrame{
+public class FrameButtons extends JFrame{
     private static final int X = 800;
     private static final int Y = 800;
 
     // The controller member
     CarController carC;
 
-    DrawPanel drawPanel = new DrawPanel(X, Y-240);
+    FrameDrawPanel frameDrawPanel = new FrameDrawPanel(X, Y-240);
 
     JPanel controlPanel = new JPanel();
 
@@ -46,8 +42,7 @@ public class CarView extends JFrame{
     JButton stopButton = new JButton("Stop all cars");
 
     // Constructor
-    public CarView(String framename, CarController cc){
-        this.carC = cc;
+    public FrameButtons(String framename){
         initComponents(framename);
     }
 
@@ -59,7 +54,7 @@ public class CarView extends JFrame{
         this.setPreferredSize(new Dimension(X,Y));
         this.setLayout(new FlowLayout(FlowLayout.LEFT, 0, 0));
 
-        this.add(drawPanel);
+        this.add(frameDrawPanel);
 
         SpinnerModel spinnerModel =
                 new SpinnerNumberModel(0, //initial value

@@ -16,7 +16,7 @@ import java.util.*;
 
 // This panel represent the animated part of the view with the car images.
 
-public class DrawPanel extends JPanel{
+public class FrameDrawPanel extends JPanel{
 
     // Just a single image, TODO: Generalize
 
@@ -26,7 +26,7 @@ public class DrawPanel extends JPanel{
     ArrayList<Vehicle> getVehicleList(){ return vehicleList; }
 
     // Initializes the panel and reads the images
-    public DrawPanel(int x, int y) {
+    public FrameDrawPanel(int x, int y) {
         this.setDoubleBuffered(true);
         this.setPreferredSize(new Dimension(x, y));
         this.setBackground(Color.green);

@@ -1,7 +1,6 @@
 package Base_Classes;
 
-import Graphical.DrawPanel;
-import SpeedChange.NoStrat;
+import Graphical.FrameDrawPanel;
 import Movement.*;
 import Ramp.*;
 import SpeedChange.SpeedChangeStrat;
@@ -24,7 +23,7 @@ public class Scania extends Vehicle {
             // Rememember to rightclick src New -> Package -> name: pics -> MOVE *.jpg to pics.
             // if you are starting in IntelliJ.
 
-            this.image = ImageIO.read(DrawPanel.class.getResourceAsStream("pics/Scania.jpg"));
+            this.image = ImageIO.read(FrameDrawPanel.class.getResourceAsStream("pics/Scania.jpg"));
         } catch (IOException ex)
         {
             ex.printStackTrace();

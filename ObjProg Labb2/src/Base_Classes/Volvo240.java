@@ -1,6 +1,6 @@
 package Base_Classes;
 
-import Graphical.DrawPanel;
+import Graphical.FrameDrawPanel;
 import SpeedChange.*;
 import Movement.*;
 import javax.imageio.ImageIO;
@@ -25,7 +25,7 @@ public class Volvo240 extends Vehicle {
             // Rememember to rightclick src New -> Package -> name: pics -> MOVE *.jpg to pics.
             // if you are starting in IntelliJ.
 
-            this.image = ImageIO.read(DrawPanel.class.getResourceAsStream("pics/Volvo240.jpg"));
+            this.image = ImageIO.read(FrameDrawPanel.class.getResourceAsStream("pics/Volvo240.jpg"));
         } catch (IOException ex)
         {
             ex.printStackTrace();
