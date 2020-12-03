@@ -15,8 +15,7 @@ import java.io.IOException;
 public class Volvo240 extends Vehicle {
 
     public Volvo240(){
-        super(0, 0, Direction.NORTH, true, true, 200.0);
-        getMovable().setStrat(getMovable().stratFactory(SpeedChangeStrat.BASIC_TRIMFACTOR_STRAT, 1.25));
+        super(0, 0, Direction.NORTH, true, true, 200.0, SpeedChangeStrat.BASIC_TRIMFACTOR_STRAT, 1.3);
 
         try {
             // You can remove the "pics" part if running outside of IntelliJ and
@@ -32,6 +31,7 @@ public class Volvo240 extends Vehicle {
             ex.printStackTrace();
         }
     }
+
     public BufferedImage getImage(){return image; }
 
 }

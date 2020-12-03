@@ -16,7 +16,6 @@ public class Ramp{
 
     public int raisableAngle(){ return getMaxAngle() - getAngle(); }
     public int lowerableAngle(){ return getAngle() - getMinAngle(); }
-
     public int getAngle(){ return this.angle; }
     public void setAngle(int angle){ this.angle = angle; }
     public int getMaxAngle(){ return this.maxAngle; }

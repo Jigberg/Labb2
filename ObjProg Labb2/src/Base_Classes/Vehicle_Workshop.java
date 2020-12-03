@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 public class Vehicle_Workshop<T extends Vehicle> {
     private final Positionable positionable = new Positionable(0, 0, Direction.NORTH, false, false);
-    private final Carry carry = new Carry(3, new ArrayList<>());
+    private Carry carry = new Carry(3, new ArrayList<>());
 
     public void load(Movable movable){
         if(getCarry().isLoadable(movable)){
@@ -17,6 +17,7 @@ public class Vehicle_Workshop<T extends Vehicle> {
             movable.getStates().setCanMove(false);
             movable.getStates().setIsTransportable(false);
         }
+
     }
     public void unload(Movable movable){
         if(isUnloadable(movable)){
@@ -30,5 +31,4 @@ public class Vehicle_Workshop<T extends Vehicle> {
     }
 
     private Carry getCarry(){ return this.carry; }
-
 }

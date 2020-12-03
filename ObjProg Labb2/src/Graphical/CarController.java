@@ -54,7 +54,6 @@ public class CarController {
     private class TimerListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
             for (Vehicle vehicle : getVehicles()) {
-
                 vehicle.move();
                 int x = (int) Math.round(vehicle.getMovable().getx());
                 int y = (int) Math.round(vehicle.getMovable().gety());
@@ -94,6 +93,12 @@ public class CarController {
     void stopEngine(){
         for(Vehicle vehicle : vehicles){
             vehicle.stopEngine();
+        }
+    }
+
+    void startEngine(){
+        for(Vehicle vehicle : vehicles){
+            vehicle.startEngine();
         }
     }
 

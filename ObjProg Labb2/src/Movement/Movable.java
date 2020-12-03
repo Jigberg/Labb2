@@ -1,13 +1,14 @@
 package Movement;
 
+import SpeedChange.SpeedChangeStrat;
+
 public class Movable extends Speed {
 
-    public Movable(double x, double y, Direction direction, boolean isMovable, boolean isTransportable, Double power, double maxForwardSpeed, double maxBackwardsSpeed, double maxSpeedIncrease, double maxSpeedDecrease) {
-        super(x, y, direction, isMovable, isTransportable, power, maxForwardSpeed, maxBackwardsSpeed, maxSpeedIncrease, maxSpeedDecrease);
+    public Movable(double x, double y, Direction direction, boolean isMovable, boolean isTransportable, Double power, double maxForwardSpeed, double maxBackwardsSpeed, double maxSpeedIncrease, double maxSpeedDecrease, SpeedChangeStrat speedChangeStrat, double speedChangeStratValue) {
+        super(x, y, direction, isMovable, isTransportable, power, maxForwardSpeed, maxBackwardsSpeed, maxSpeedIncrease, maxSpeedDecrease, speedChangeStrat, speedChangeStratValue);
     }
-    public Movable(double x, double y, Direction direction, boolean isMovable, boolean isTransportable, double power) {
-        super(x, y, direction, isMovable, isTransportable, power);
-
+    public Movable(double x, double y, Direction direction, boolean isMovable, boolean isTransportable, double power, SpeedChangeStrat speedChangeStrat, double speedChangeStratValue) {
+        super(x, y, direction, isMovable, isTransportable, power, speedChangeStrat, speedChangeStratValue);
     }
 
     public void move(){

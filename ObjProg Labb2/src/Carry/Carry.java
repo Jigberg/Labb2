@@ -14,6 +14,7 @@ public class Carry{
 
     public void loadInFront(Movable movable){ if(isLoadable(movable)){getLoad().add(0, movable); }}
     public void loadInBack(Movable movable){ if(isLoadable(movable)){getLoad().add(movable); }}
+
     public void unloadFront(){
         if(isUnloadable()){
             Movable unloaded = getLoad().remove(0);
@@ -21,6 +22,7 @@ public class Carry{
             unloaded.getStates().setCanMove(true);
         }
     }
+
     public void unloadBack(){
         if(isUnloadable()){
             Movable unloaded = getLoad().remove(getVolume());
@@ -28,6 +30,7 @@ public class Carry{
             unloaded.getStates().setCanMove(true);
         }
     }
+
     public boolean isLoadable(Movable movable){
         if(getVolume() == getCapacity()){ return false; }
         if(getLoad().contains(movable)){ return false; }
@@ -37,6 +40,7 @@ public class Carry{
         if(getVolume() == 0){ return false; }
         return true;
     }
+
     public boolean isRightPosition(Movable movable, Movable attachedMovable){
         int range = 3;
         switch (movable.getDirection()){
@@ -56,4 +60,6 @@ public class Carry{
     public List<Movable> getLoad(){ return this.load; }
     public int getCapacity(){ return this.capacity; }
     public int getVolume(){ return getLoad().size(); }
+//    public Movable getAttachedTo(){ return this.attachedTo; }
+
 }
