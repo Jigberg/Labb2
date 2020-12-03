@@ -38,7 +38,6 @@ public abstract class Speed extends Positionable{
         }else{
             setCurrentSpeed(getMaxForwardSpeed());
         }
-
     }
     public void decreaseSpeed(double amount){
         double speedDecrease = getStrat().calculateSpeedChange(amount);
@@ -48,9 +47,16 @@ public abstract class Speed extends Positionable{
             setCurrentSpeed(-getMaxBackwardsSpeed());
         }
     }
-
+    public CalculateSpeedChangeStrat stratFactory(SpeedChangeStrat strat, double modifierValue) {
+        return switch (strat) {
+            case NO_STRAT -> new NoStrat();
+            case BASIC_TURBO_STRAT -> new BasicTurboStrat(modifierValue);
+            case BASIC_TRIMFACTOR_STRAT -> new BasicTrimFactorStrat(modifierValue);
+        };
+    }
     boolean isSpeedIncreaseInRange(double speedIncrease){ return speedIncrease <= getMaxSpeedIncrease() && getCurrentSpeed() + speedIncrease <= getMaxForwardSpeed(); }
     boolean isSpeedDecreaseInRange(double speedDecrease){ return speedDecrease <= getMaxSpeedDecrease() && getCurrentSpeed() - speedDecrease >= -getMaxBackwardsSpeed(); }
+
     public double getPower(){ return this.power; }
     public double getCurrentSpeed() { return currentSpeed; }
     double getMaxForwardSpeed(){ return this.maxForwardSpeed; }
@@ -59,13 +65,6 @@ public abstract class Speed extends Positionable{
     public void setStrat(CalculateSpeedChangeStrat strat){
         this.strat = strat;
         getStrat().setPower(getPower());
-    }
-    public CalculateSpeedChangeStrat stratFactory(SpeedChangeStrat strat, double modifierValue) {
-        return switch (strat) {
-            case NO_STRAT -> new NoStrat();
-            case BASIC_TURBO_STRAT -> new BasicTurboStrat(modifierValue);
-            case BASIC_TRIMFACTOR_STRAT -> new BasicTrimFactorStrat(modifierValue);
-        };
     }
     public void setCurrentSpeed(double currentSpeed) {
         this.currentSpeed = currentSpeed;

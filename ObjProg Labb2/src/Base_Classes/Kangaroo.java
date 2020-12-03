@@ -16,17 +16,15 @@ public class Kangaroo{
 
     Carry carry = new Carry(3, new ArrayList<>());
 
+    public void move(){ getMovable().move();}
+    public void turnRight(){getMovable().turnRight();}
+    public void turnLeft(){getMovable().turnLeft();}
+    public void jumpFaster(double amount){getMovable().increaseSpeed(amount); }
+    public void jumpSlower(double amount){getMovable().decreaseSpeed(amount); }
+    public void checkSurroundings(){ System.out.println("x: " + getMovable().getx() + "   ,  y: "+ getMovable().gety()); }
+
     public void load(KangarooCub kangarooCub){ getCarry().loadInFront(kangarooCub.getMovable()); }
-    public void load(WallabyCub wallabyCub){
-        getCarry().loadInFront(wallabyCub.getMovable());
-    }
-
-    public int getVolume(){
-        return getCarry().getVolume();
-    }
-
-    private void doload(Movable movable){ if(getCarry().isLoadable(movable)){getCarry().getLoad().add(0, movable); }}
-
+    public void load(WallabyCub wallabyCub){getCarry().loadInFront(wallabyCub.getMovable()); }
     public void unload(){
         if(getCarry().isUnloadable()){
             Movable unloaded = getCarry().getLoad().remove(getCarry().getVolume());
@@ -35,13 +33,7 @@ public class Kangaroo{
         }
     }
 
-    public void move(){ getMovable().move();}
-    public void turnRight(){getMovable().turnRight();}
-    public void turnLeft(){getMovable().turnLeft();}
-    public void jumpFaster(double amount){getMovable().increaseSpeed(amount); }
-    public void jumpSlower(double amount){getMovable().decreaseSpeed(amount); }
-    public void checkSurroundings(){ System.out.println("x: " + getMovable().getx() + "   ,  y: "+ getMovable().gety()); }
-
+    public int getVolume(){ return getCarry().getVolume(); }
     public Movable getMovable(){return this.movable;}
     private Carry getCarry(){ return this.carry; }
 

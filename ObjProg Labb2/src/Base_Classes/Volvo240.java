@@ -32,7 +32,6 @@ public class Volvo240 extends Vehicle {
             ex.printStackTrace();
         }
     }
-
     public BufferedImage getImage(){return image; }
 
 }

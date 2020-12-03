@@ -38,7 +38,6 @@ public class Saab95 extends Vehicle {
     }
 
     BasicTurboStrat getBasicTurboStrat(){ return this.basicTurboStrat; }
-
     public BufferedImage getImage(){ return image; }
 
 

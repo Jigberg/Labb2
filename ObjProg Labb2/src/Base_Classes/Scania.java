@@ -44,7 +44,6 @@ public class Scania extends Vehicle {
             }
         }
     }
-
     /**
      * Lowers ramp.
      * @param angle to lower platform.
@@ -57,9 +56,8 @@ public class Scania extends Vehicle {
             }
         }
     }
-
     boolean isSecured() { return getRamp().getAngle() == getRamp().getMinAngle(); }
-
+    // what is happening here?
     private boolean isBeingTransported = false;
     Ramp getRamp(){ return this.ramp; }
     public boolean getIsMovable() { return !isBeingTransported; }
