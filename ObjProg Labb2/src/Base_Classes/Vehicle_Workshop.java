@@ -31,4 +31,6 @@ public class Vehicle_Workshop<T extends Vehicle> {
     }
 
     private Carry getCarry(){ return this.carry; }
+    public Positionable getPositionable(){ return this.positionable;}
+
 }

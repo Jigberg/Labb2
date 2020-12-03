@@ -59,6 +59,14 @@ public class Scania extends Vehicle {
         }
     }
 
+    @Override
+    public void startEngine(){
+        if(isSecured()){
+            getMovable().getStates().setCanMove(true);
+        }
+    }
+
+
     boolean isSecured() { return getRamp().getAngle() == getRamp().getMinAngle(); }
 
     private boolean isBeingTransported = false;

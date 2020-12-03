@@ -5,6 +5,7 @@ import Movement.Direction;
 import Movement.Movable;
 import Ramp.*;
 import SpeedChange.SpeedChangeStrat;
+import java.util.List;
 
 import java.util.ArrayList;
 
@@ -16,8 +17,8 @@ public class Car_Transport extends Vehicle {
         super(0, 0, Direction.NORTH, true, true, 200.0, SpeedChangeStrat.NO_STRAT, 0);
     }
 
-    public void load(Saab95 saab95){ doLoad(saab95.getMovable()); }
-    public void load(Volvo240 volvo240){ doLoad(volvo240.getMovable()); }
+    public void load(Saab95 saab95){ getCarry().loadInBack(saab95.getMovable()); }
+    public void load(Volvo240 volvo240){ getCarry().loadInBack(volvo240.getMovable()); }
 
     @Override
     public void move(){
@@ -44,8 +45,6 @@ public class Car_Transport extends Vehicle {
     private Ramp getRamp(){ return this.ramp; }
 
 
-    private void doLoad(Movable movable){ if(isLoadable(movable)){getCarry().getLoad().add(0, movable); }}
-
     private boolean isLoadable(Movable movable){
         if (!movable.getStates().getIsTransportable()) { return false; }
         if (movable.getStates().getCurrentlyHasSpeed()){ return false; }
@@ -57,7 +56,7 @@ public class Car_Transport extends Vehicle {
 
     public void unload(){
         if(isUnloadable()){
-            Movable unloaded = getCarry().getLoad().remove(0);
+            Movable unloaded = getCarry().unloadBack();
             unloaded.getStates().setIsTransportable(true);
             unloaded.getStates().setCanMove(true);
         }
@@ -72,8 +71,8 @@ public class Car_Transport extends Vehicle {
     public void raiseRamp(int angle){
         if(!getMovable().getStates().getCurrentlyHasSpeed()) {
             getRamp().setAngle(Math.min(getRamp().raisableAngle(), angle));
-            if(!isSecured()){
-                getMovable().getStates().setCanMove(false);
+            if(isSecured()){
+                getMovable().getStates().setCanMove(true);
             }
         }
     }
@@ -85,12 +84,20 @@ public class Car_Transport extends Vehicle {
     public void lowerRamp(int angle) {
         if(!getMovable().getStates().getCurrentlyHasSpeed()) {
             getRamp().setAngle(Math.min(getRamp().lowerableAngle(), angle));
-            if(isSecured()){
-                getMovable().getStates().setCanMove(true);
+            if(!isSecured()){
+                getMovable().getStates().setCanMove(false);
             }
         }
     }
 
+    @Override
+    public void startEngine(){
+        if(isSecured()){
+            getMovable().getStates().setCanMove(true);
+        }
+    }
     boolean isSecured() { return getRamp().getAngle() == getRamp().getMaxAngle(); }
+    public int getVolume(){ return getCarry().getVolume(); }
+    public List<Movable> getLoad(){ return getCarry().getLoad(); }
 }
 

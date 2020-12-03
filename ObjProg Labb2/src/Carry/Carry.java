@@ -12,23 +12,27 @@ public class Carry{
         this.load = load;
     }
 
-    public void loadInFront(Movable movable){ if(isLoadable(movable)){getLoad().add(0, movable); }}
-    public void loadInBack(Movable movable){ if(isLoadable(movable)){getLoad().add(movable); }}
+    public void loadInFront(Movable movable){ if(isLoadable(movable)){getLoad().add(movable); }}
+    public void loadInBack(Movable movable){ if(isLoadable(movable)){getLoad().add(0, movable); }}
 
-    public void unloadFront(){
+    public Movable unloadFront(){
+        if(isUnloadable()){
+            Movable unloaded = getLoad().remove(getVolume() - 1);
+            unloaded.getStates().setIsTransportable(true);
+            unloaded.getStates().setCanMove(true);
+            return unloaded;
+        }
+        return null;
+    }
+
+    public Movable unloadBack(){
         if(isUnloadable()){
             Movable unloaded = getLoad().remove(0);
             unloaded.getStates().setIsTransportable(true);
             unloaded.getStates().setCanMove(true);
+            return unloaded;
         }
-    }
-
-    public void unloadBack(){
-        if(isUnloadable()){
-            Movable unloaded = getLoad().remove(getVolume());
-            unloaded.getStates().setIsTransportable(true);
-            unloaded.getStates().setCanMove(true);
-        }
+        return null;
     }
 
     public boolean isLoadable(Movable movable){

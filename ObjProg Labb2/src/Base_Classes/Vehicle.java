@@ -54,6 +54,7 @@ public abstract class Vehicle {
     public void startEngine(){
         getMovable().getStates().setCanMove(true);
     }
+
     public void gas(double amount){
         if(0 <= amount && amount <= 1){ getMovable().increaseSpeed(amount); }
         else if(amount > 1){getMovable().increaseSpeed(1);}
@@ -61,6 +62,23 @@ public abstract class Vehicle {
     public void brake(double amount){
         if(0 <= amount && amount <= 1){ getMovable().decreaseSpeed(amount); }
         else if(amount > 1){getMovable().decreaseSpeed(1);}
+    }
+
+    public double positionY(){
+        return getMovable().gety();
+    }
+
+    public double positionX(){
+        return getMovable().getx();
+    }
+
+    public Direction direction(){
+        return getMovable().getDirection();
+    }
+
+
+    public double currentSpeed(){
+        return getMovable().getCurrentSpeed();
     }
     public Movable getMovable(){return movable;}
     public BufferedImage getImage(){ return image; }
