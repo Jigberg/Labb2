@@ -1,19 +1,30 @@
 package Graphical;
 
 import Base_Classes.Vehicle;
+import Carry.Carry;
+import Graphical.*;
+import Graphical.Views.Buttons;
+import Graphical.Views.DrawPanel;
+import Graphical.Views.IView;
+
 
 import javax.swing.*;
+import java.awt.dnd.DragGestureEvent;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Application {
         private final int delay = 50;
         private Timer timer = new Timer(delay, new TimerListener());
 
-        List<Vehicle> vehicles = (new CarFactory()).createCarList();
-        Frame  = new Frame();
-        CarController carController = new CarController(getVehicles());
+
+        private DrawPanel drawPanel = new DrawPanel();
+        private Model model = new Model();
+        private Buttons buttons = new Buttons("CarSim");
+
+        private CarController carController = new CarController(getModel(), getButtons());
 
 
         /* Each step the TimerListener moves all the cars in the list and tells the
@@ -21,18 +32,18 @@ public class Application {
          * */
         private class TimerListener implements ActionListener {
             public void actionPerformed(ActionEvent e) {
-                getCarController().updateCars();
-                getFrame().paint();
+                getModel().updateCars();
+                for ()
                 }
             }
 
         public void start(){ getTimer().start(); }
 
 
+        Model getModel() {return this.model; }
         private Timer getTimer(){ return this.timer; }
-        private Frame getFrame(){ return this.frame; }
         private CarController getCarController(){ return this.carController; }
-        private List<Vehicle> getVehicles(){ return this.vehicles; }
+        private Buttons getButtons(){ return this.buttons; }
 }
 
 

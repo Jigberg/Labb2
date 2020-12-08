@@ -1,4 +1,8 @@
 package Graphical.Views;
 
-public interface IView {
+import java.util.ArrayDeque;
+import java.util.Deque;
+
+public interface IView{
+
 }

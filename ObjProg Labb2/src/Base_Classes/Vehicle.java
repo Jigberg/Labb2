@@ -1,5 +1,6 @@
 package Base_Classes;
 import Movement.*;
+import SpeedChange.SpeedChangeStrat;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
@@ -12,7 +13,6 @@ import java.io.IOException;
 
 public abstract class Vehicle {
     private final Movable movable;
-    BufferedImage image;
 
     /**
      * Constructor that also sets the vehicle to a not-movable state to begin with.
@@ -52,19 +52,6 @@ public abstract class Vehicle {
         movable = new Movable(x, y, direction, isMovable, isTransportable, power, power, 0, 20, 20,  speedChangeStrat, speedChangeStratValue);
         getMovable().getStates().setCanMove(false);
 
-        try {
-            // You can remove the "pics" part if running outside of IntelliJ and
-            // everything is in the same main folder.
-            // volvoImage = ImageIO.read(new File("Volvo240.jpg"));
-
-            // Rememember to rightclick src New -> Package -> name: pics -> MOVE *.jpg to pics.
-            // if you are starting in IntelliJ.
-
-            this.image = ImageIO.read(DrawPanel.class.getResourceAsStream("pics/Volvo240.jpg"));
-        } catch (IOException ex)
-        {
-            ex.printStackTrace();
-        }
     }
 
     /**
@@ -141,7 +128,6 @@ public abstract class Vehicle {
      * Getters and setters below.
      */
     public Movable getMovable(){return movable;}
-    public BufferedImage getImage(){ return image; }
-    void setImage(BufferedImage image){ this.image = image; }
+
 }
 

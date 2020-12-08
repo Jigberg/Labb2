@@ -1,5 +1,4 @@
 package Base_Classes;
-import Graphical.DrawPanel;
 import SpeedChange.*;
 import Movement.Direction;
 
@@ -19,12 +18,6 @@ public class Saab95 extends Vehicle {
      */
     public Saab95(){
         super(200, 0, Direction.NORTH, true, true, 200.0, SpeedChangeStrat.BASIC_TURBO_STRAT, 10);
-        try {
-            setImage(ImageIO.read(DrawPanel.class.getResourceAsStream("pics/Saab95.jpg")));
-        } catch (IOException ex)
-        {
-            ex.printStackTrace();
-        }
     }
 
     /**

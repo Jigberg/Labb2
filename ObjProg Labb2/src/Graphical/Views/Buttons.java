@@ -1,6 +1,8 @@
 package Graphical.Views;
 
 import Graphical.CarController;
+import Graphical.MessageVoid;
+import Graphical.Observer;
 
 import javax.swing.*;
 import javax.swing.event.ChangeEvent;
@@ -8,6 +10,7 @@ import javax.swing.event.ChangeListener;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.List;
 
 /**
  * This class represents the full view of the MVC pattern of your car simulator.
@@ -17,14 +20,35 @@ import java.awt.event.ActionListener;
  * TODO: Write more actionListeners and wire the rest of the buttons
  **/
 
-public class ViewButtons extends JFrame{
+public class Buttons extends JFrame{
     private static final int X = 800;
     private static final int Y = 800;
+    MessageVoid observable;
+
+
+    List<Graphical.Observer> observers;
+
+    void notifyObservers(String message, int amount){
+        for(Graphical.Observer o : getObservers()){
+            o.recieveMessage(message, amount);
+        }
+    }
+
+    public void addObserver(Graphical.Observer o){
+        getObservers().add(o);
+    }
+    void removeObserver(Graphical.Observer o){
+        getObservers().remove(o);
+    }
+
+    List<Observer> getObservers(){ return observers; }
 
     // The controller member
     CarController carC;
 
-    FrameDrawPanel viewDrawPanel = new ViewDrawPanel(X, Y-240);
+    FrameDrawPanel viewDrawPanel = new DrawPanel(X, Y-240);
+
+
 
     JPanel controlPanel = new JPanel();
 
@@ -44,7 +68,7 @@ public class ViewButtons extends JFrame{
     JButton stopButton = new JButton("Stop all cars");
 
     // Constructor
-    public ViewButtons(String framename){
+    public Buttons(String framename){
         initComponents(framename);
     }
 
@@ -103,10 +127,13 @@ public class ViewButtons extends JFrame{
 
         // This actionListener is for the gas button only
         // TODO: Create more for each component as necessary
+
+
         gasButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 carC.gas(gasAmount);
+                notifyObservers("Gas");
             }
         });
 

@@ -1,6 +1,5 @@
 package Base_Classes;
 
-import Graphical.DrawPanel;
 import SpeedChange.*;
 import Movement.*;
 import javax.imageio.ImageIO;
@@ -20,11 +19,5 @@ public class Volvo240 extends Vehicle {
      */
     public Volvo240(){
         super(0, 0, Direction.NORTH, true, true, 200.0, SpeedChangeStrat.BASIC_TRIMFACTOR_STRAT, 1.3);
-        try{
-            setImage(ImageIO.read(DrawPanel.class.getResourceAsStream("pics/Volvo240.jpg")));
-        } catch (IOException ex)
-        {
-            ex.printStackTrace();
-        }
     }
 }

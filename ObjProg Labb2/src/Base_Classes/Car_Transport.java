@@ -2,9 +2,10 @@ package Base_Classes;
 
 import Ramp.*;
 import Carry.Carry;
-import Movement.*;
 import java.util.ArrayList;
+import Movement.*;
 import java.util.List;
+import SpeedChange.SpeedChangeStrat;
 
 /**
   * @author Lukas, Emil, Martin.
@@ -16,7 +17,7 @@ public class Car_Transport extends Vehicle {
      * Ramp object for lowering and raising the rampbed.
      */
     private final Carry carry = new Carry(4, new ArrayList<>());
-    private final Ramp ramp = new Ramp(90, 90, 0);
+    private final Ramp ramp = new Ramp(90, 90, 0, 90);
 
     public Car_Transport(){
         super(0, 0, Direction.NORTH, true, true, 200.0, SpeedChangeStrat.NO_STRAT, 0);
@@ -89,46 +90,18 @@ public class Car_Transport extends Vehicle {
      * @return if Car Transport doesn't have speed and if other basic conditions are met.
      */
     private boolean isUnloadable(){ return getCarry().isUnloadable() && !getMovable().getStates().getCurrentlyHasSpeed(); }
-    /**
-     * Raises ramp.
-     * @param angle to raise platform.
-     */
-    public void raiseRamp(int angle){
-        if(!getMovable().getStates().getCurrentlyHasSpeed()) {
-            getRamp().setAngle(getRamp().getAngle() + Math.min(getRamp().raisableAngle(), angle));
-            if(isSecured()){
-                getMovable().getStates().setCanMove(true);
-            }
-        }
-    }
-    /**
-     * Lowers ramp.
-     * @param angle to lower platform.
-     */
-    public void lowerRamp(int angle) {
-        if(!getMovable().getStates().getCurrentlyHasSpeed()) {
-            getRamp().setAngle(getRamp().getAngle() - Math.min(getRamp().lowerableAngle(), angle));
-            if(!isSecured()){
-                getMovable().getStates().setCanMove(false);
-            }
-        }
-    }
-    /**
-     * If ramp is secured, starts the engine by setting canMove to true.
-     */
+
     @Override
     public void startEngine(){
-        if(isSecured()){
+        if(getRamp().isSecured()){
             getMovable().getStates().setCanMove(true);
         }
     }
-    /**
-     * @return if ramp angle is at max.
-     */
-    private boolean isSecured() { return getRamp().getAngle() == getRamp().getMaxAngle(); }
+
     /**
      * Getters and setters.
      */
+
     public int getVolume(){ return getCarry().getVolume(); }
     public List<Movable> getLoad(){ return getCarry().getLoad(); }
     private Carry getCarry(){ return this.carry; }

@@ -11,17 +11,13 @@ import java.util.List;
  * Includes different
  */
 public class PiecesFactory {
-    public List<Vehicle> createCarList(){  // in future, plan is to add multiple methods with an enum as parameter.
-        List<Vehicle> list = new ArrayList<>();
-        list.add(new Volvo240());
-        list.add(new Saab95());
-        list.add(new Scania());
-        return list;
-    }
-    public List<Movable> createGeneral(){
-        List<Movable> list = new ArrayList<>();
-        list.add(new Volvo240().getMovable());
-        list.add(new Kangaroo().getMovable());
+    public List<Wrapper> createWrapperList(){  // in future, plan is to add multiple methods with an enum as parameter.
+        List<Wrapper> list = new ArrayList<>();
+        list.add(new Wrapper(new Volvo240(), "pics/Volvo240.jpg", null, null));
+        Saab95 saab = new Saab95();
+        list.add(new Wrapper(saab, "pics/Saab95.jpg", null, saab.getMovable().getSpeedChangeStratFactory().getStrat().getTurbo()));
+        Scania scania = new Scania();
+        list.add(new Wrapper(scania, "pics/Scania.jpg", scania.getRamp(), null));
         return list;
     }
 }

@@ -1,5 +1,6 @@
 package Base_Classes;
-
+import Movement.*;
+import SpeedChange.*;
 
 public class KangarooCub {
     /**

@@ -1,5 +1,6 @@
 package Graphical.Views;
 
+import java.util.*;
 import java.awt.*;
 import java.awt.List;
 import java.awt.image.BufferedImage;
@@ -12,21 +13,14 @@ import Graphical.*;
 import Base_Classes.*;
 
 import java.sql.Array;
-import java.util.*;
+
 
 // This panel represent the animated part of the view with the car images.
 
-public class ViewDrawPanel extends JPanel{
-
-    // Just a single image, TODO: Generalize
-
-    ArrayList<Vehicle> vehicleList;
-
-    void setVehicleList(ArrayList<Vehicle> vehicleList) { this.vehicleList = vehicleList; }
-    ArrayList<Vehicle> getVehicleList(){ return vehicleList; }
-
+public class DrawPanel extends JPanel{
+    private java.util.List<Wrapper> wrappers;
     // Initializes the panel and reads the images
-    public ViewDrawPanel(int x, int y) {
+    public DrawPanel(java.util.List<Wrapper> wrappers, int x, int y) {
         this.setDoubleBuffered(true);
         this.setPreferredSize(new Dimension(x, y));
         this.setBackground(Color.green);
