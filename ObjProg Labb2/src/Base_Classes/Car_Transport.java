@@ -5,7 +5,6 @@ import Carry.Carry;
 import java.util.ArrayList;
 import Movement.*;
 import java.util.List;
-import SpeedChange.SpeedChangeStrat;
 
 /**
   * @author Lukas, Emil, Martin.
@@ -17,10 +16,14 @@ public class Car_Transport extends Vehicle {
      * Ramp object for lowering and raising the rampbed.
      */
     private final Carry carry = new Carry(4, new ArrayList<>());
-    private final Ramp ramp = new Ramp(90, 90, 0, 90);
+    private final Ramp ramp = new Ramp(90, 90, 0, 90, getMovable());
 
+
+    public Car_Transport(double x, double y, Direction direction){
+        super(x, y, direction, 200, 0, 200, 1, 1);
+    }
     public Car_Transport(){
-        super(0, 0, Direction.NORTH, true, true, 200.0, SpeedChangeStrat.NO_STRAT, 0);
+        super(0, 0, Direction.NORTH, 200, 0, 200, 1, 1);
     }
 
     /**
@@ -97,6 +100,9 @@ public class Car_Transport extends Vehicle {
             getMovable().getStates().setCanMove(true);
         }
     }
+
+    public void raiseRamp(int angle){ getRamp().raiseRamp(angle); }
+    public void lowerRamp(int angle){ getRamp().lowerRamp(angle); }
 
     /**
      * Getters and setters.

@@ -1,7 +1,6 @@
 package Graphical;
 
 import Base_Classes.Vehicle;
-import Graphical.*;
 import Ramp.*;
 import SpeedChange.*;
 
@@ -12,13 +11,13 @@ import java.io.IOException;
 public class Wrapper {
     private BufferedImage image;
     private final Ramp ramp;
-    private final Turbo turbo;
+    private final Turbo0 turbo0;
     private final Vehicle vehicle;
 
-    public Wrapper(Vehicle vehicle, String imagePath, Ramp ramp, Turbo turbo) {
+    public Wrapper(Vehicle vehicle, String imagePath, Ramp ramp, Turbo0 turbo0) {
         this.ramp = ramp;
         this.vehicle = vehicle;
-        this.turbo = turbo;
+        this.turbo0 = turbo0;
 
         try {
             this.image = ImageIO.read(getClass().getResourceAsStream(imagePath));
@@ -28,7 +27,7 @@ public class Wrapper {
         }
     }
 
-    public Turbo getTurbo() {return this.turbo; }
+    public Turbo0 getTurbo() {return this.turbo0; }
     public Ramp getRamp(){ return this.ramp; }
     public Vehicle getVehicle (){ return this.vehicle; }
     public double getX(){ return getVehicle().getMovable().getx(); }

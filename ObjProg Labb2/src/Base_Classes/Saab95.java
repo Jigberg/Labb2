@@ -1,5 +1,6 @@
 package Base_Classes;
-import SpeedChange.*;
+import Movement.Enum_AccelerationFactor;
+import Movement.Turbo;
 import Movement.Direction;
 
 import javax.imageio.ImageIO;
@@ -16,19 +17,22 @@ public class Saab95 extends Vehicle {
      * Constructor for Saab95.
      * Sets an image for the Saab.
      */
+    public Saab95(double x, double y, Direction direction){
+        super(x, y, direction, 200, 0, 200, 1, 1);
+        addFactor(Enum_AccelerationFactor.TURBO, 1.25);
+    }
     public Saab95(){
-        super(200, 0, Direction.NORTH, true, true, 200.0, SpeedChangeStrat.BASIC_TURBO_STRAT, 10);
+        super(0, 0, Direction.NORTH, 200, 0, 200, 1, 1);
+        addFactor(Enum_AccelerationFactor.TURBO, 1.25);
     }
 
     /**
      * Turns the turbo on
      */
-    public void turboON(){
-        getMovable().getSpeedChangeStratFactory().getStrat().getTurbo().setTurboOn(true);
-    }
+    public void turboON(){ addFactor(Enum_AccelerationFactor.TURBO, 1.25); }
 
     /**
      * Turns the turbo off
      */
-    public void turboOFF(){ getMovable().getSpeedChangeStratFactory().getStrat().getTurbo().setTurboOn(false); }
+    public void turboOFF(){ removeFactor(Enum_AccelerationFactor.TURBO);  }
 }

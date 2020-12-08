@@ -1,30 +1,29 @@
 package Movement;
 
-import SpeedChange.SpeedChangeStrat;
 
 /**
  * @author Lukas, Emil, Martin.
  * A class for traversing positions
  */
-public class Movable extends Speed {
+public class Movable extends Positionable {
+    private final Speed speed;
 
-    public Movable(double x, double y, Direction direction, boolean isMovable, boolean isTransportable, Double power, double maxForwardSpeed, double maxBackwardsSpeed, double maxSpeedIncrease, double maxSpeedDecrease, SpeedChangeStrat speedChangeStrat, double speedChangeStratValue) {
-        super(x, y, direction, isMovable, isTransportable, power, maxForwardSpeed, maxBackwardsSpeed, maxSpeedIncrease, maxSpeedDecrease, speedChangeStrat, speedChangeStratValue);
+    public Movable(double x, double y, Direction direction, boolean canMove, double maxForwardSpeed, double maxBackwardsSpeed, double power, double maxAcceleration, double maxDeceleration){
+        super(x, y, direction, canMove, true);
+        this.speed = new Speed(maxForwardSpeed, maxBackwardsSpeed, power, maxAcceleration, maxDeceleration);
     }
-    public Movable(double x, double y, Direction direction, boolean isMovable, boolean isTransportable, double power, SpeedChangeStrat speedChangeStrat, double speedChangeStratValue) {
-        super(x, y, direction, isMovable, isTransportable, power, speedChangeStrat, speedChangeStratValue);
-    }
+
 
     /**
      * Moves the object in the direction it's facing with the current speed it has.
      */
     public void move(){
-        if(getStates().getCanMove()) {
+    if(getStates().getCanMove()) {
             switch (getDirection()) {
-                case NORTH -> sety(gety() + getCurrentSpeed());
-                case EAST -> setx(getx() + getCurrentSpeed());
-                case SOUTH -> sety(gety() - getCurrentSpeed());
-                case WEST -> setx(getx() - getCurrentSpeed());
+                case NORTH -> sety(gety() + getSpeed().getCurrentSpeed());
+                case EAST -> setx(getx() + getSpeed().getCurrentSpeed());
+                case SOUTH -> sety(gety() - getSpeed().getCurrentSpeed());
+                case WEST -> setx(getx() - getSpeed().getCurrentSpeed());
             }
         }
     }
@@ -50,5 +49,16 @@ public class Movable extends Speed {
             case WEST -> setDirection(Direction.SOUTH);
         }
     }
+
+    public void increaseSpeed(double time){ if(getStates().getCanMove()){getSpeed().increaseSpeed(time); }}
+    public void decreaseSpeed(double time){ if(getStates().getCanMove()){getSpeed().decreaseSpeed(time); }}
+
+    public void addFactor(Enum_AccelerationFactor enum_accelerationFactor, double value){ getSpeed().addFactor(enum_accelerationFactor, value); }
+    public void removeFactor(int index){ getSpeed().removeFactor(index); }
+    public void removeFactor(Enum_AccelerationFactor enum_accelerationFactor){ getSpeed().removeFactor(enum_accelerationFactor); }
+
+    private Speed getSpeed() { return this.speed; }
+    public double getCurrentSpeed(){ return getSpeed().getCurrentSpeed(); }
+    public void setCurrentSpeed(double time){ getSpeed().setCurrentSpeed(time); }
 }
 

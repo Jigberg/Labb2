@@ -1,7 +1,6 @@
 package Ramp;
 
 import Movement.Movable;
-import Movement.Speed;
 
 /**
  * @author Lukas, Emil, Martin.
@@ -14,11 +13,12 @@ public class Ramp{
     private Movable attachedToMovable;
     private int securedAngle;
 
-    public Ramp(int angle, int maxAngle, int minAngle, int securedAngle){
+    public Ramp(int angle, int maxAngle, int minAngle, int securedAngle, Movable attachedToMovable){
         this.angle = angle;
         this.maxAngle = maxAngle;
         this.minAngle = minAngle;
         this.securedAngle = securedAngle;
+        this.attachedToMovable = attachedToMovable;
 
     }
     /**

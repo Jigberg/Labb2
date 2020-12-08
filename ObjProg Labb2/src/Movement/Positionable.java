@@ -15,14 +15,14 @@ public class Positionable {
      * @param x position in the x-axis.
      * @param y position in the y-axis.
      * @param direction facing.
-     * @param isMovable sets if is movable.
+     * @param canMove sets if object can move on its own.
      * @param isTransportable  sets if is transportable.
      */
-    public Positionable(double x, double y, Direction direction, boolean isMovable, boolean isTransportable){
+    public Positionable(double x, double y, Direction direction, boolean canMove, boolean isTransportable){
         this.x = x;
         this.y = y;
         this.direction = direction;
-        this.states = new States(isMovable, isTransportable);
+        this.states = new States(canMove, isTransportable);
     }
 
     /**

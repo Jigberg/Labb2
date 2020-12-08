@@ -1,6 +1,5 @@
 package Base_Classes;
 import Movement.*;
-import SpeedChange.SpeedChangeStrat;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
@@ -17,42 +16,23 @@ public abstract class Vehicle {
     /**
      * Constructor that also sets the vehicle to a not-movable state to begin with.
      * Also sets an image, standard Volvo.
-     * @param x
-     * @param y
-     * @param direction
-     * @param isMovable
-     * @param isTransportable
-     * @param power
-     * @param maxForwardSpeed
-     * @param maxBackwardsSpeed
-     * @param maxSpeedIncrease
-     * @param maxSpeedDecrease
-     * @param speedChangeStrat
-     * @param speedChangeStratValue
+     * @param x position on x-axis
+     * @param y position on y-axis.
+     * @param direction direction facing.
+     * @param maxForwardSpeed max speed forward.
+     * @param maxBackwardsSpeed max speed backwards.
+     * @param power the engine power.
+     * @param maxAcceleration max acceleration.
+     * @param maxDeceleration max deceleration.
      */
-    public Vehicle (int x, int y, Direction direction, boolean isMovable, boolean isTransportable, Double power, double maxForwardSpeed, double maxBackwardsSpeed,
-                    double maxSpeedIncrease , double maxSpeedDecrease, SpeedChangeStrat speedChangeStrat, double speedChangeStratValue){
-        movable = new Movable(x, y, direction, isMovable, isTransportable, power, maxForwardSpeed, maxBackwardsSpeed, maxSpeedIncrease, maxSpeedDecrease,
-                    speedChangeStrat, speedChangeStratValue);
+    public Vehicle (double x, double y, Direction direction,double maxForwardSpeed, double maxBackwardsSpeed, double power, double maxAcceleration, double maxDeceleration){
+        this.movable = new Movable(x, y, direction, false, maxForwardSpeed, maxBackwardsSpeed, power, maxAcceleration, maxDeceleration);
     }
 
-    /**
-     * Constructor that also sets the vehicle to a not-movable state to begin with.
-     * Also sets an image, standard Volvo.
-     * @param x
-     * @param y
-     * @param direction
-     * @param isMovable
-     * @param isTransportable
-     * @param power
-     * @param speedChangeStrat
-     * @param speedChangeStratValue
-     */
-    public Vehicle (int x, int y, Direction direction, boolean isMovable, boolean isTransportable, Double power, SpeedChangeStrat speedChangeStrat, double speedChangeStratValue){
-        movable = new Movable(x, y, direction, isMovable, isTransportable, power, power, 0, 20, 20,  speedChangeStrat, speedChangeStratValue);
-        getMovable().getStates().setCanMove(false);
+    public void addFactor(Enum_AccelerationFactor enum_accelerationFactor, double value){ getMovable().addFactor(enum_accelerationFactor, value); }
+    public void removeFactor(int index){ getMovable().removeFactor(index); }
+    public void removeFactor(Enum_AccelerationFactor enum_accelerationFactor){ getMovable().removeFactor(enum_accelerationFactor); }
 
-    }
 
     /**
      * Calls the methods "move", "turnRight" and "turnLeft" in the class movable.
@@ -92,7 +72,7 @@ public abstract class Vehicle {
      */
     public void brake(double amount){
         if(0 <= amount && amount <= 1){ getMovable().decreaseSpeed(amount); }
-        else if(amount > 1){getMovable().decreaseSpeed(1);}
+        else if(amount > 1){ getMovable().decreaseSpeed(1); }
     }
 
     /**
@@ -127,7 +107,7 @@ public abstract class Vehicle {
     /**
      * Getters and setters below.
      */
-    public Movable getMovable(){return movable;}
+    public Movable getMovable(){ return this.movable; }
 
 }
 

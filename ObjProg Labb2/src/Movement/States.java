@@ -7,7 +7,7 @@ package Movement;
 public class States {
     boolean canMove;
     boolean isTransportable;
-    boolean currentlyHasSpeed = false;
+    boolean currentlyHasSpeed;
 
 
     /**

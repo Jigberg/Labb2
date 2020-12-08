@@ -2,7 +2,6 @@ package Base_Classes;
 
 import Movement.*;
 import Carry.*;
-import SpeedChange.*;
 
 import java.util.ArrayList;
 
@@ -16,7 +15,8 @@ public class Ferry extends Vehicle {
      */
     private final Carry carry = new Carry(20, new ArrayList<>());
 
-    public Ferry(){ super(0, 0, Direction.NORTH, true, true, 200.0, SpeedChangeStrat.NO_STRAT, 0); }
+    public Ferry(double x, double y, Direction direction){ super(x, y, direction, 200, 0, 200, 1, 1); }
+    public Ferry(){ super(0, 0, Direction.NORTH, 200, 0, 200, 1, 1); }
 
     /**
      * Overloaded loading methods for the accept loading objects.

@@ -3,7 +3,6 @@ package Base_Classes;
 import Carry.Carry;
 import Movement.Direction;
 import Movement.Movable;
-import SpeedChange.SpeedChangeStrat;
 import java.util.List;
 
 import java.util.ArrayList;
@@ -16,7 +15,9 @@ public class Kangaroo{
     private final Movable movable;
     private final Carry carry = new Carry(3, new ArrayList<>());
 
-    public Kangaroo (){ this.movable = new Movable(0, 0, Direction.NORTH, true, true, 50, SpeedChangeStrat.NO_STRAT, 0); }
+    public Kangaroo(double x, double y, Direction direction){ this.movable = new Movable(x, y, direction, true, 50, 50, 1, 1, 1); }
+    public Kangaroo(){ this.movable = new Movable(0, 0, Direction.NORTH, true, 0, 50, 1, 1, 1); }
+
     /**
      * Loads KangarooCub types. Fills the "front" position first.
      * @param kangarooCub a KangarooCub object.
