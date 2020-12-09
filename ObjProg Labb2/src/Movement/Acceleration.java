@@ -8,7 +8,7 @@ import java.util.Map;
 public class Acceleration {
     private final double power;
     private final double maxAcceleration;
-    private final double maxDeceleration;
+    private final double maxDeceleration;   // TODO need to check acceleration in range.
     private final AccelerationFactorFactory accelerationFactorFactory = new AccelerationFactorFactory();
     private final Composite composite;
 

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Composite implements AccelerationFactor{
-    List<AccelerationFactor> factors = new ArrayList<>();
+    private final List<AccelerationFactor> factors = new ArrayList<>();
 
     void addFactor(AccelerationFactor factor){ getFactors().add(factor); }
     void removeFactor(int index){ getFactors().remove(index); }

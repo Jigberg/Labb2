@@ -1,7 +1,7 @@
 package Movement;
 
 public class TrimFactor implements AccelerationFactor{
-    private double trimFactor;
+    private final double trimFactor;
 
     public TrimFactor(double trimFactor){
         this.trimFactor = trimFactor;

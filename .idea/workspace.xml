@@ -3,14 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="8e4e1559-3f44-49f3-a750-412b025dc411" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/src/Base_Classes/Saab95.java" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/src/Base_Classes/Saab95.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/src/Base_Classes/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/src/Base_Classes/Vehicle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ObjProg Labb2/src/Movement/Acceleration.java" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/src/Movement/Acceleration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/src/Movement/AccelerationFactorFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/src/Movement/AccelerationFactorFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ObjProg Labb2/src/Movement/Composite.java" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/src/Movement/Composite.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/src/Movement/Enum_AccelerationFactor.java" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/src/Movement/Enum_AccelerationFactor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/src/Movement/Movable.java" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/src/Movement/Movable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/src/Movement/Speed.java" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/src/Movement/Speed.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/src/Movement/TrimFactor.java" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/src/Movement/TrimFactor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/src/Movement/Turbo.java" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/src/Movement/Turbo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

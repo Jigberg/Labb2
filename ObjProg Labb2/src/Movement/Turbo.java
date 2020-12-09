@@ -1,7 +1,7 @@
 package Movement;
 
 public class Turbo implements AccelerationFactor{
-    private double turboValue;
+    private final double turboValue;
 
     public Turbo(double turboValue){
         this.turboValue = turboValue;
