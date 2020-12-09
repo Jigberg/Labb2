@@ -17,8 +17,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -51,9 +51,17 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
-  <component name="RunManager" selected="JUnit.All in Labb2">
+  <component name="RunManager" selected="Application.main">
+    <configuration name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main" />
+      <module name="Labb2" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="All in Labb2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Labb2" />
       <option name="PACKAGE_NAME" value="" />
@@ -74,6 +82,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.main" />
         <item itemvalue="JUnit.All in Labb2" />
         <item itemvalue="JUnit.TestVehicle.testGasWithoutStart" />
       </list>
@@ -104,31 +113,39 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="591" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1607439032923" />
+    <state x="707" y="364" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1607522733718">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="707" y="364" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1607522733718" />
     <state x="712" y="264" key="FileChooserDialogImpl" timestamp="1606980964473">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="716" y="261" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1606814011393" />
     <state x="712" y="264" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1606980964473" />
-    <state width="1867" height="34" key="GridCell.Tab.0.bottom" timestamp="1607464990365">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state width="1340" height="274" key="GridCell.Tab.0.bottom" timestamp="1607526771670">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="1340" height="274" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1607526771670" />
     <state width="1867" height="34" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1607464990365" />
-    <state width="1867" height="34" key="GridCell.Tab.0.center" timestamp="1607464990364">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state width="1340" height="274" key="GridCell.Tab.0.center" timestamp="1607526771670">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="1340" height="274" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1607526771670" />
     <state width="1867" height="34" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1607464990364" />
-    <state width="1867" height="34" key="GridCell.Tab.0.left" timestamp="1607464990364">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state width="1340" height="274" key="GridCell.Tab.0.left" timestamp="1607526771670">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="1340" height="274" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1607526771670" />
     <state width="1867" height="34" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1607464990364" />
-    <state width="1867" height="34" key="GridCell.Tab.0.right" timestamp="1607464990364">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state width="1340" height="274" key="GridCell.Tab.0.right" timestamp="1607526771670">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="1340" height="274" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1607526771670" />
     <state width="1867" height="34" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1607464990364" />
-    <state x="366" y="83" key="SettingsEditor" timestamp="1607499705918">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state x="312" y="0" key="SettingsEditor" timestamp="1607515392839">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="312" y="0" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1607418419785" />
+    <state x="312" y="0" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1607515392839" />
     <state x="366" y="83" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1607499705918" />
     <state x="536" y="317" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1607418415111">
       <screen x="0" y="0" width="1920" height="1040" />

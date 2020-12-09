@@ -73,7 +73,7 @@ public class TestVehicle {
         saab.turboON();
         saab.startEngine();
         saab.gas(1);
-        assertEquals(saab.currentSpeed(), 3.125, 0.001);
+        assertEquals(saab.currentSpeed(), 2.5, 0.001);
     }
 
     @Test
@@ -83,7 +83,7 @@ public class TestVehicle {
         saab.startEngine();
         saab.turboOFF();
         saab.gas(1);
-        assertEquals(saab.currentSpeed(), 2.5, 0.001);
+        assertEquals(saab.currentSpeed(), 2, 0.001);
     }
 
     @Test

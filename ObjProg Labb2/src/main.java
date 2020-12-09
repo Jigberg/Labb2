@@ -1,10 +1,11 @@
 import Base_Classes.*;
+import Graphical.Application;
 
 public class main {
     public static void main(String[] args) { (new main()).program(); }
 
     void program(){
-        kangaroo();
+        carSim();
     }
 
     void volvo(){
@@ -36,5 +37,10 @@ public class main {
         Car_Transport Ct = new Car_Transport();
         Ct.move();
 
+    }
+
+    void carSim(){
+        Application app = new Application();
+        app.start();
     }
 }

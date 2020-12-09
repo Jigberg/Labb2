@@ -1,6 +1,7 @@
 package Graphical;
 
 import Base_Classes.Vehicle;
+import Movement.Enum_AccelerationFactor;
 import Movement.Movable;
 import Graphical.*;
 import java.util.*;
@@ -13,13 +14,13 @@ public class Model {
     List<Wrapper> pieces = getPiecesFactory().createWrapperList();
 
     public void updateCars(){
-        for (Vehicle vehicle : getVehicles()) {
-            vehicle.move();
-            int x = (int) Math.round(vehicle.getMovable().getx());
-            int y = (int) Math.round(vehicle.getMovable().gety());
+        for (Wrapper wrapper : getPieces()) {
+            wrapper.getVehicle().move();
+            int x = (int) Math.round(wrapper.getX());
+            int y = (int) Math.round(wrapper.getY());
             if(!isInFrame(x,y)) {
-                vehicle.turnRight();
-                vehicle.turnRight();
+                wrapper.getVehicle().turnRight();
+                wrapper.getVehicle().turnRight();
             }
         }
     }
@@ -34,11 +35,11 @@ public class Model {
         return true;
     }
 
-    public void move(){
-        for(Wrapper piece : getPieces()){
-            piece.getVehicle().getMovable().move();
-        }
-    }
+//    public void move(){
+//        for(Wrapper piece : getPieces()){
+//            piece.getVehicle().getMovable().move();
+//        }
+//    }
     public void gas(double amount){
         for(Wrapper piece : getPieces()){
             piece.getVehicle().gas(amount);
@@ -78,16 +79,19 @@ public class Model {
 
     void turnTurboOn(){
         for(Wrapper piece : getPieces()){
-            if(!(piece.getTurbo() == null)){
-                piece.getTurbo().setTurboOn(true);
+            if(piece.hasTurbo()){
+                piece.getVehicle().removeFactor(Enum_AccelerationFactor.TURBO);
+                piece.getVehicle().addFactor(Enum_AccelerationFactor.TURBO, 1.25);
             }
         }
     }
 
     void turnTurboOff(){
         for(Wrapper piece : getPieces()){
-            if(!(piece.getTurbo() == null)){
-                piece.getTurbo().setTurboOn(false);
+            if(piece.hasTurbo()){
+                System.out.println("removing turbo factor");
+                piece.getVehicle().removeFactor(Enum_AccelerationFactor.TURBO);
+
             }
         }
     }

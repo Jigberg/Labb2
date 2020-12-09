@@ -2,6 +2,8 @@ package Ramp;
 
 import Movement.Movable;
 
+import javax.sound.midi.SysexMessage;
+
 /**
  * @author Lukas, Emil, Martin.
  * A class for a ramp.
@@ -26,9 +28,10 @@ public class Ramp{
      * @param angle to raise platform.
      */
     public void raiseRamp(int angle){
-        if(!getAttachedToMovable().getStates().getCurrentlyHasSpeed()) {
+        if(getAttachedToMovable().getCurrentSpeed() == 0) {
             setAngle(getAngle() + Math.min(raisableAngle(), angle));
             getAttachedToMovable().getStates().setCanMove(isSecured());
+            System.out.println("Raising ramp, angle is: " + getAngle());
         }
     }
     /**
@@ -36,9 +39,10 @@ public class Ramp{
      * @param angle to lower platform.
      */
     public void lowerRamp(int angle) {
-        if(!getAttachedToMovable().getStates().getCurrentlyHasSpeed()) {
+        if(getAttachedToMovable().getCurrentSpeed() == 0) {
             setAngle(getAngle() - Math.min(lowerableAngle(), angle));
             getAttachedToMovable().getStates().setCanMove(isSecured());
+            System.out.println("Lowering ramp, angle is: " + getAngle());
         }
     }
     /**

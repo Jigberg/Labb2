@@ -17,11 +17,11 @@ public class Volvo240 extends Vehicle {
      * Sets an image for the Volvo.
      */
     public Volvo240(double x, double y, Direction direction){
-        super(x, y, direction, 200, 0, 200, 1, 1);
+        super(x, y, direction, 50, 0, 200, 1, 1);
         addFactor(Enum_AccelerationFactor.TRIMFACTOR, 1.3);
     }
     public Volvo240(){
-        super(0, 0, Direction.NORTH, 200, 0, 200, 1, 1);
+        super(0, 0, Direction.NORTH, 50, 0, 200, 1, 1);
         addFactor(Enum_AccelerationFactor.TRIMFACTOR, 1.3);
     }
 }

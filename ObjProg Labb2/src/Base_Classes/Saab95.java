@@ -19,11 +19,11 @@ public class Saab95 extends Vehicle {
      * Sets an image for the Saab.
      */
     public Saab95(double x, double y, Direction direction){
-        super(x, y, direction, 200, 0, 200, 1, 1);
+        super(x, y, direction, 50, 0, 200, 1, 1);
         addFactor(Enum_AccelerationFactor.TURBO, 1.25);
     }
     public Saab95(){
-        super(0, 0, Direction.NORTH, 200, 0, 200, 1, 1);
+        super(0, 0, Direction.NORTH, 50, 0, 200, 1, 1);
         addFactor(Enum_AccelerationFactor.TURBO, 1.25);
     }
 

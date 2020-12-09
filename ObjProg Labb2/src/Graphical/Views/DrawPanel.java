@@ -2,7 +2,6 @@ package Graphical.Views;
 
 import java.util.*;
 import java.awt.*;
-import java.awt.List;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -11,33 +10,21 @@ import javax.swing.*;
 import Base_Classes.*;
 import Graphical.*;
 import Base_Classes.*;
-
+import java.util.List;
 import java.sql.Array;
 
 
 // This panel represent the animated part of the view with the car images.
 
-public class DrawPanel extends JPanel{
+public class DrawPanel extends JPanel implements IView{
     private java.util.List<Wrapper> wrappers;
+
     // Initializes the panel and reads the images
-    public DrawPanel(java.util.List<Wrapper> wrappers, int x, int y) {
+    public DrawPanel(java.util.List<Wrapper> wrappers) {
         this.setDoubleBuffered(true);
-        this.setPreferredSize(new Dimension(x, y));
+        this.setPreferredSize(new Dimension(800, 560));
         this.setBackground(Color.green);
-        /*// Print an error message in case file is not found with a try/catch block
-        try {
-            // You can remove the "pics" part if running outside of IntelliJ and
-            // everything is in the same main folder.
-            // volvoImage = ImageIO.read(new File("Volvo240.jpg"));
-
-            // Rememember to rightclick src New -> Package -> name: pics -> MOVE *.jpg to pics.
-            // if you are starting in IntelliJ.
-            volvoImage = ImageIO.read(DrawPanel.class.getResourceAsStream("pics/Volvo240.jpg"));
-        } catch (IOException ex)
-        {
-            ex.printStackTrace();
-        }*/
-
+        this.wrappers = wrappers;
     }
 
     // This method is called each time the panel updates/refreshes/repaints itself
@@ -45,9 +32,12 @@ public class DrawPanel extends JPanel{
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
-        // g.drawImage(volvoImage, vehiclePoint.x, vehiclePoint.y, null); // see javadoc for more info on the parameters
-        for (Vehicle vehicle : vehicleList) {
-            g.drawImage(vehicle.getImage(), (int) vehicle.getMovable().getx(), (int) vehicle.getMovable().gety(), null);
+        for (Wrapper wrapper : getWrappers()) {
+            g.drawImage(wrapper.getImage(), (int) wrapper.getX(), (int) wrapper.getY(), null);
         }
     }
+
+    public Component getComponent(){ return this; }
+
+    java.util.List<Wrapper> getWrappers(){ return this.wrappers; }
 }

@@ -6,7 +6,6 @@
       <sourceFolder url="file://$MODULE_DIR$/ObjProg Labb2/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ObjProg Labb2/Test" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/ObjProg Labb2/out" />
-      <excludeFolder url="file://$MODULE_DIR$/ObjProg Labb2/src/Graphical" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
