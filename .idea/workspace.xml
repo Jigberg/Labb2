@@ -2,39 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8e4e1559-3f44-49f3-a750-412b025dc411" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ObjProg Labb2/src/Movement/Acceleration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ObjProg Labb2/src/Movement/AccelerationFactor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ObjProg Labb2/src/Movement/AccelerationFactorFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ObjProg Labb2/src/Movement/Composite.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ObjProg Labb2/src/Movement/Enum_AccelerationFactor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ObjProg Labb2/src/Movement/TrimFactor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ObjProg Labb2/src/Movement/Turbo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Labb2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Labb2.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/Test/TestVehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/Test/TestVehicle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/src/Base_Classes/Car_Transport.java" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/src/Base_Classes/Car_Transport.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/src/Base_Classes/Ferry.java" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/src/Base_Classes/Ferry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/src/Base_Classes/Kangaroo.java" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/src/Base_Classes/Kangaroo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/src/Base_Classes/KangarooCub.java" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/src/Base_Classes/KangarooCub.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ObjProg Labb2/src/Base_Classes/Saab95.java" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/src/Base_Classes/Saab95.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/src/Base_Classes/Scania.java" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/src/Base_Classes/Scania.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ObjProg Labb2/src/Base_Classes/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/src/Base_Classes/Vehicle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/src/Base_Classes/Volvo240.java" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/src/Base_Classes/Volvo240.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/src/Base_Classes/WallabyCub.java" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/src/Base_Classes/WallabyCub.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/src/Graphical/Wrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/src/Graphical/Wrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/src/Movement/Acceleration.java" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/src/Movement/Acceleration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/src/Movement/AccelerationFactorFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/src/Movement/AccelerationFactorFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/src/Movement/Composite.java" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/src/Movement/Composite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/src/Movement/Enum_AccelerationFactor.java" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/src/Movement/Enum_AccelerationFactor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ObjProg Labb2/src/Movement/Movable.java" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/src/Movement/Movable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/src/Movement/Positionable.java" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/src/Movement/Positionable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ObjProg Labb2/src/Movement/Speed.java" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/src/Movement/Speed.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/src/Movement/States.java" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/src/Movement/States.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/src/Ramp/Ramp.java" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/src/Ramp/Ramp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/src/SpeedChange/BasicTrimFactorStrat.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/src/SpeedChange/BasicTurboStrat.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/src/SpeedChange/CalculateSpeedChangeStrat.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/src/SpeedChange/NoStrat.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/src/SpeedChange/SpeedChangeStrat.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/src/SpeedChange/SpeedChangeStratFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/src/SpeedChange/TrimFactor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/src/SpeedChange/Turbo.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,6 +55,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunManager" selected="JUnit.All in Labb2">
     <configuration name="All in Labb2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
@@ -123,10 +100,10 @@
     </state>
     <state x="809" y="210" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1607419937375" />
     <state x="809" y="212" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1050@0.0.1920.1050" timestamp="1607443776997" />
-    <state x="618" y="366" width="684" height="329" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1606996321231">
+    <state x="618" y="366" width="684" height="329" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1607497347208">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="618" y="366" width="684" height="329" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1050@0.0.1920.1050" timestamp="1606996321231" />
+    <state x="618" y="366" width="684" height="329" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1050@0.0.1920.1050" timestamp="1607497347208" />
     <state x="591" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1607439032923">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -136,31 +113,35 @@
     </state>
     <state x="716" y="261" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1606814011393" />
     <state x="712" y="264" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1606980964473" />
-    <state width="1867" height="270" key="GridCell.Tab.0.bottom" timestamp="1607460078545">
+    <state width="1867" height="34" key="GridCell.Tab.0.bottom" timestamp="1607464990365">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1867" height="270" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1607460078545" />
-    <state width="1867" height="270" key="GridCell.Tab.0.center" timestamp="1607460078544">
+    <state width="1867" height="34" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1607464990365" />
+    <state width="1867" height="34" key="GridCell.Tab.0.center" timestamp="1607464990364">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1867" height="270" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1607460078544" />
-    <state width="1867" height="270" key="GridCell.Tab.0.left" timestamp="1607460078544">
+    <state width="1867" height="34" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1607464990364" />
+    <state width="1867" height="34" key="GridCell.Tab.0.left" timestamp="1607464990364">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1867" height="270" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1607460078544" />
-    <state width="1867" height="270" key="GridCell.Tab.0.right" timestamp="1607460078545">
+    <state width="1867" height="34" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1607464990364" />
+    <state width="1867" height="34" key="GridCell.Tab.0.right" timestamp="1607464990364">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1867" height="270" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1607460078545" />
-    <state x="-32" y="0" key="SettingsEditor" timestamp="1607455446436">
+    <state width="1867" height="34" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1607464990364" />
+    <state x="366" y="83" key="SettingsEditor" timestamp="1607499705918">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="312" y="0" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1607418419785" />
-    <state x="-32" y="0" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1607455446436" />
+    <state x="366" y="83" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1607499705918" />
     <state x="536" y="317" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1607418415111">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="536" y="317" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1607418415111" />
+    <state x="522" y="15" width="874" height="1034" key="search.everywhere.popup" timestamp="1607500041165">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="522" y="15" width="874" height="1034" key="search.everywhere.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1607500041165" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

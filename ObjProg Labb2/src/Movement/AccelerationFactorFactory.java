@@ -5,9 +5,11 @@ public class AccelerationFactorFactory {
         return switch (enum_accelerationFactor) {
             case TURBO -> new Turbo(value);
             case TRIMFACTOR -> new TrimFactor(value);
-
+            case COMPOSITE -> new Composite();
         };
     }
+
+
     Composite createComposite(AccelerationFactor...factors){
        Composite composite = new Composite();
        for(AccelerationFactor factor : factors){

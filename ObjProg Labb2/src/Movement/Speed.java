@@ -1,5 +1,7 @@
 package Movement;
 
+import java.util.Map;
+
 public class Speed {
     private double currentSpeed;
     private final double maxForwardSpeed;
@@ -41,7 +43,8 @@ public class Speed {
             }
         }
 
-    public void addFactor(Enum_AccelerationFactor enum_accelerationFactor, double value){ getAcceleration().addFactor(enum_accelerationFactor, value);}
+    public void addFactor(Enum_AccelerationFactor enum_accelerationFactor, double value){ getAcceleration().addFactor(enum_accelerationFactor, value); }
+    public void addFactorComposite(Map<Enum_AccelerationFactor, Double> factorPairs){ getAcceleration().addFactorComposite(factorPairs); }
     public void removeFactor(int index){ getAcceleration().removeFactor(index); }
     public void removeFactor(Enum_AccelerationFactor enum_accelerationFactor){ getAcceleration().removeFactor(enum_accelerationFactor); }
 

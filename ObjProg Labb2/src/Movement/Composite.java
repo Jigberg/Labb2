@@ -19,5 +19,22 @@ public class Composite implements AccelerationFactor{
         return effect;
     }
 
+    /**
+     * If client do removeFactor(Composite) all composites disregarding content will be removed.
+     * If client do removeFactor(Turbo) all composites with only turbo factors will be removed.
+     * @param o the comparing object.
+     * @return If client do removeFactor(Composite) all composites disregarding content will be removed.
+     * Or If client do f.ex. removeFactor(Turbo) all composites with only turbo factors will be removed.
+     *
+     */
+    @Override
+    public boolean equals(Object o){
+        if(o instanceof Composite){ return true; }
+        for(AccelerationFactor factor : getFactors()){
+            if(!factor.equals(o)){ return false; }
+        }
+        return true;
+    }
+
     public List<AccelerationFactor> getFactors() { return this.factors; }
 }

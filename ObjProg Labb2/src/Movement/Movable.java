@@ -1,6 +1,8 @@
 package Movement;
 
 
+import java.util.Map;
+
 /**
  * @author Lukas, Emil, Martin.
  * A class for traversing positions
@@ -54,6 +56,7 @@ public class Movable extends Positionable {
     public void decreaseSpeed(double time){ if(getStates().getCanMove()){getSpeed().decreaseSpeed(time); }}
 
     public void addFactor(Enum_AccelerationFactor enum_accelerationFactor, double value){ getSpeed().addFactor(enum_accelerationFactor, value); }
+    public void addFactorComposite(Map<Enum_AccelerationFactor, Double> factorPairs){ getSpeed().addFactorComposite(factorPairs); }
     public void removeFactor(int index){ getSpeed().removeFactor(index); }
     public void removeFactor(Enum_AccelerationFactor enum_accelerationFactor){ getSpeed().removeFactor(enum_accelerationFactor); }
 

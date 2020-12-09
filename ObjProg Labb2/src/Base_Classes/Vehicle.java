@@ -4,6 +4,7 @@ import Movement.*;
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
+import java.util.Map;
 
 /**
  * @author Nicklas, Lukas, Emil, Martin.
@@ -30,6 +31,7 @@ public abstract class Vehicle {
     }
 
     public void addFactor(Enum_AccelerationFactor enum_accelerationFactor, double value){ getMovable().addFactor(enum_accelerationFactor, value); }
+    public void addFactorComposite(Map<Enum_AccelerationFactor, Double> factorPairs){ getMovable().addFactorComposite(factorPairs); }
     public void removeFactor(int index){ getMovable().removeFactor(index); }
     public void removeFactor(Enum_AccelerationFactor enum_accelerationFactor){ getMovable().removeFactor(enum_accelerationFactor); }
 
