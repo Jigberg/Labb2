@@ -30,7 +30,10 @@ public class Saab95 extends Vehicle {
     /**
      * Turns the turbo on
      */
-    public void turboON(){ addFactor(Enum_AccelerationFactor.TURBO, 1.25); }
+    public void turboON(){
+        turboOFF();
+        addFactor(Enum_AccelerationFactor.TURBO, 1.25);
+    }
 
     /**
      * Turns the turbo off
