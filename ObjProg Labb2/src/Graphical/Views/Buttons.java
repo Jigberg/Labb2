@@ -4,14 +4,17 @@ import Graphical.CarController;
 import Graphical.MessageVoid;
 import Graphical.Observer;
 
+import javax.accessibility.*;
 import javax.swing.*;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.beans.PropertyChangeListener;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 /**
  * This class represents the full view of the MVC pattern of your car simulator.
@@ -23,84 +26,55 @@ import java.util.List;
 
 public class Buttons extends JPanel implements IView{
     private static final int X = 800;
-    private static final int Y = 900;
+    private static final int Y = 800;
+    private final Notifier notifier = new Notifier();
 
-    // observer features
-    List<Graphical.Observer> observers = new ArrayList<>();
-
-    void notifyObservers(String message, int amount){
-        for(Graphical.Observer o : getObservers()){
-            o.recieveMessage(message, amount);
-        }
-    }
-
-    public void addObserver(Graphical.Observer o){
-        getObservers().add(o);
-    }
-    void removeObserver(Graphical.Observer o){
-        getObservers().remove(o);
-    }
-
-    List<Observer> getObservers(){ return observers; }
-
-    JPanel controlPanel = new JPanel();
-
-    JPanel gasPanel = new JPanel();
-    JSpinner gasSpinner = new JSpinner();
-    int gasAmount = 0;
-    JLabel gasLabel = new JLabel("Amount of gas");
-
-    JButton gasButton = new JButton("Gas");
-    JButton brakeButton = new JButton("Brake");
-    JButton turboOnButton = new JButton("Saab Turbo on");
-    JButton turboOffButton = new JButton("Saab Turbo off");
-    JButton liftBedButton = new JButton("Scania Lift Bed");
-    JButton lowerBedButton = new JButton("Lower Lift Bed");
-
-    JButton startButton = new JButton("Start all cars");
-    JButton stopButton = new JButton("Stop all cars");
-
-    ActionListener createActionListener(String message, int amount){
-        return new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                notifyObservers(message, amount);
-            }
-        };
+    public Buttons(){
+        initComponents();
     }
 
 
-//    gasButton.addActionListener(new ActionListener() {
-//        @Override
-//        public void actionPerformed(ActionEvent e) {
-//            notifyObservers("Gas", gasAmount);
-//        }
-//    });
-
-    public Buttons() {
-        // Sets everything in place and fits everything
-        // TODO: Take a good look and make sure you understand how these methods and components work
+    private void initComponents() {
+        // gasPanel
+        JPanel gasPanel = new JPanel();
+        JLabel gasLabel = new JLabel("Amount of gas");
 
         SpinnerModel spinnerModel =
                 new SpinnerNumberModel(0, //initial value
                         0, //min
                         100, //max
                         1);//step
+        JSpinner gasSpinner = new JSpinner(spinnerModel);
 
-        gasSpinner = new JSpinner(spinnerModel);
-        gasSpinner.addChangeListener(new ChangeListener() {
-            public void stateChanged(ChangeEvent e) {
-                gasAmount = (int) ((JSpinner) e.getSource()).getValue();
-            }
-        });
 
         gasPanel.setLayout(new BorderLayout());
         gasPanel.add(gasLabel, BorderLayout.PAGE_START);
         gasPanel.add(gasSpinner, BorderLayout.PAGE_END);
-
         this.add(gasPanel);
 
+        // controlPanel
+        JPanel controlPanel = new JPanel();
         controlPanel.setLayout(new GridLayout(2, 4));
+
+        // Buttons
+        JButton gasButton = new JButton("Gas");
+        gasButton.addActionListener(new NotifyObserverListener(getNotifier(), gasButton.getText(), gasSpinner.getAccessibleContext().getAccessibleValue()));
+
+        JButton brakeButton = new JButton("Brake");
+        brakeButton.addActionListener(new NotifyObserverListener(getNotifier(), brakeButton.getText(), gasSpinner.getAccessibleContext().getAccessibleValue()));
+
+        JButton turboOnButton = new JButton("Saab Turbo on");
+        turboOnButton.addActionListener(new NotifyObserverListener(getNotifier(), turboOnButton.getText()));
+
+        JButton turboOffButton = new JButton("Saab Turbo off");
+        turboOffButton.addActionListener(new NotifyObserverListener(getNotifier(), turboOffButton.getText()));
+
+        JButton liftBedButton = new JButton("Scania Lift Bed");
+        liftBedButton.addActionListener(new NotifyObserverListener(getNotifier(), liftBedButton.getText()));
+
+        JButton lowerBedButton = new JButton("Scania Lower Bed");
+        lowerBedButton.addActionListener(new NotifyObserverListener(getNotifier(), lowerBedButton.getText()));
+
 
         controlPanel.add(gasButton, 0);
         controlPanel.add(turboOnButton, 1);
@@ -108,84 +82,26 @@ public class Buttons extends JPanel implements IView{
         controlPanel.add(brakeButton, 3);
         controlPanel.add(turboOffButton, 4);
         controlPanel.add(lowerBedButton, 5);
+
         controlPanel.setPreferredSize(new Dimension((X / 2) + 4, 200));
         this.add(controlPanel);
         controlPanel.setBackground(Color.CYAN);
 
-
+        JButton startButton = new JButton("Start all cars");
+        startButton.addActionListener(new NotifyObserverListener(getNotifier(), startButton.getText()));
         startButton.setBackground(Color.blue);
         startButton.setForeground(Color.green);
         startButton.setPreferredSize(new Dimension(X / 5 - 15, 200));
         this.add(startButton);
 
-
+        JButton stopButton = new JButton("Stop all cars");
+        stopButton.addActionListener(new NotifyObserverListener(getNotifier(), stopButton.getText()));
         stopButton.setBackground(Color.red);
         stopButton.setForeground(Color.black);
         stopButton.setPreferredSize(new Dimension(X / 5 - 15, 200));
         this.add(stopButton);
-
-        // This actionListener is for the gas button only
-        // TODO: Create more for each component as necessary
-
-        // gasButton.addActionListener(createActionListener("Gas", gasAmount));
-
-        gasButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                notifyObservers("Gas", gasAmount);
-            }
-        });
-
-        brakeButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                notifyObservers("Brake", gasAmount);
-            }
-        });
-        stopButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                notifyObservers("StopEngine", 0);
-            }
-        });
-
-        startButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                notifyObservers("StartEngine", 0);
-            }
-        });
-
-        turboOnButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                notifyObservers("TurboOn", 0);
-            }
-        });
-
-        turboOffButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                notifyObservers("TurboOff", 0);
-            }
-        });
-
-        liftBedButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                notifyObservers("LiftBed", 0);
-            }
-        });
-
-        lowerBedButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                notifyObservers("LowerBed", 0);
-            }
-        });
-
     }
 
+    public Notifier getNotifier() { return notifier; }
     public Component getComponent(){ return this; }
-
 }

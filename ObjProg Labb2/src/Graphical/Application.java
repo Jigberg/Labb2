@@ -23,8 +23,9 @@ public class Application {
         private final Model model = new Model();
         private final PieceData pieceData = new PieceData(getModel().getPieces());
         private final DrawPanel drawPanel = new DrawPanel(getModel().getPieces());
+
         private final Buttons buttons = new Buttons();
-        private final CarController carController = new CarController(getModel(), getButtons());
+        private final CarController carController = new CarController(getModel(), getButtons().getNotifier());
         private final MainFrame mainFrame = new MainFrame(Arrays.asList(getPieceData(), getDrawPanel(), getButtons()));
 
 

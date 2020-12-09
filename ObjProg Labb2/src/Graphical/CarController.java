@@ -2,6 +2,7 @@ package Graphical;
 
 import java.util.List;
 import Graphical.Views.Buttons;
+import Graphical.Views.Notifier;
 
 /*
 * This class represents the Controller part in the MVC pattern.
@@ -12,23 +13,25 @@ import Graphical.Views.Buttons;
 public class CarController implements Observer{
     private final Model model;
 
-    public CarController(Model model, Buttons buttons){
+    public CarController(Model model, Notifier... notifiers){
         this.model = model;
-        buttons.addObserver(this);
+        for(Notifier notifier : notifiers){
+            notifier.addObserver(this);
+        }
     }
 
     @Override
     public void recieveMessage(String message, int amount) {
-
+        System.out.println("cc, amount: " + amount);
         switch (message){
             case "Gas" -> getModel().gas(amount);
             case "Brake" -> getModel().brake(amount);
-            case "StartEngine" -> getModel().startEngine();
-            case "StopEngine" -> getModel().stopEngine();
-            case "TurboOn" -> getModel().turnTurboOn();
-            case "TurboOff" -> getModel().turnTurboOff();
-            case "LiftBed" -> getModel().liftBed();
-            case "LowerBed" -> getModel().lowerbed();
+            case "Saab Turbo on" -> getModel().turnTurboOn();
+            case "Saab Turbo off" -> getModel().turnTurboOff();
+            case "Scania Lift Bed" -> getModel().liftBed();
+            case "Scania Lower Bed" -> getModel().lowerbed();
+            case "Start all cars" -> getModel().startEngine();
+            case "Stop all cars" -> getModel().stopEngine();
         }
     }
 

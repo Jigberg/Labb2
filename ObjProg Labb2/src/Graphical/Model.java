@@ -41,6 +41,7 @@ public class Model {
 //        }
 //    }
     public void gas(double amount){
+        System.out.println("gasing!, amount: " + amount);
         for(Wrapper piece : getPieces()){
             piece.getVehicle().gas(amount);
         }
