@@ -1,7 +1,6 @@
 package Graphical.Views;
 
 import Graphical.CarController;
-import Graphical.MessageVoid;
 import Graphical.Observer;
 
 import javax.accessibility.*;

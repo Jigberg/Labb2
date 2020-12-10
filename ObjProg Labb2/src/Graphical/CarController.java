@@ -22,7 +22,6 @@ public class CarController implements Observer{
 
     @Override
     public void recieveMessage(String message, int amount) {
-        System.out.println("cc, amount: " + amount);
         switch (message){
             case "Gas" -> getModel().gas(amount);
             case "Brake" -> getModel().brake(amount);

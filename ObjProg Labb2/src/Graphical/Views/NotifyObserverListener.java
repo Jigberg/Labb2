@@ -26,12 +26,10 @@ public class NotifyObserverListener implements ActionListener {
             public boolean setCurrentAccessibleValue(Number n) {
                 return false;
             }
-
             @Override
             public Number getMinimumAccessibleValue() {
                 return 0;
             }
-
             @Override
             public Number getMaximumAccessibleValue() {
                 return 0;

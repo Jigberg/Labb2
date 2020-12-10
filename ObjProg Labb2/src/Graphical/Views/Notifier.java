@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Notifier {
-    List<Graphical.Observer> observers = new ArrayList<>();
+    private final List<Graphical.Observer> observers = new ArrayList<>();
 
     void notifyObservers(String message, int amount){
         for(Graphical.Observer o : getObservers()){

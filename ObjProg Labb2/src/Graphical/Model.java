@@ -10,8 +10,8 @@ import Base_Classes.*;
 import javax.swing.text.WrappedPlainView;
 
 public class Model {
-    PiecesFactory piecesFactory = new PiecesFactory();
-    List<Wrapper> pieces = getPiecesFactory().createWrapperList();
+    private final PiecesFactory piecesFactory = new PiecesFactory();
+    private final List<Wrapper> pieces = getPiecesFactory().createWrapperList();
 
     public void updateCars(){
         for (Wrapper wrapper : getPieces()) {
@@ -41,7 +41,6 @@ public class Model {
 //        }
 //    }
     public void gas(double amount){
-        System.out.println("gasing!, amount: " + amount);
         for(Wrapper piece : getPieces()){
             piece.getVehicle().gas(amount);
         }
@@ -79,8 +78,10 @@ public class Model {
     }
 
     void turnTurboOn(){
+        System.out.println("turbo on!");
         for(Wrapper piece : getPieces()){
             if(piece.hasTurbo()){
+                System.out.println("yes it has turbo");
                 piece.getVehicle().removeFactor(Enum_AccelerationFactor.TURBO);
                 piece.getVehicle().addFactor(Enum_AccelerationFactor.TURBO, 1.25);
             }

@@ -11,7 +11,7 @@ public class Wrapper {
     private BufferedImage image;
     private final Ramp ramp;
     private final Vehicle vehicle;
-    private boolean hasTurbo;
+    private final boolean hasTurbo;
 
     public Wrapper(Vehicle vehicle, String imagePath, Ramp ramp, boolean hasTurbo) {
         this.ramp = ramp;

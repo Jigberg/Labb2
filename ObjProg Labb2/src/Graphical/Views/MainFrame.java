@@ -10,7 +10,7 @@ import java.util.List;
 import Graphical.*;
 
 public class MainFrame extends JFrame{
-    List<IView> views;
+    private final List<IView> views;
 
     public MainFrame(List<IView> views) {
         this.views = views;

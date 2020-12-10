@@ -6,7 +6,7 @@ import javax.swing.*;
 import java.awt.*;
 
 public class PieceData extends JPanel implements IView{
-    private java.util.List<Wrapper> wrappers;
+    private final java.util.List<Wrapper> wrappers;
     // Initializes the panel and reads the images
     public PieceData(java.util.List<Wrapper> wrappers) {
         this.setDoubleBuffered(true);
