@@ -2,28 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8e4e1559-3f44-49f3-a750-412b025dc411" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ObjProg Labb2/src/Graphical/Views/Notifier.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ObjProg Labb2/src/Graphical/Views/NotifyObserverListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Graphical/Application$TimerListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Graphical/Application$TimerListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Graphical/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Graphical/Application.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Graphical/CarController.class" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Graphical/CarController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Graphical/Model.class" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Graphical/Model.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Graphical/Views/Buttons$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Graphical/Views/Buttons$10.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Graphical/Views/Buttons$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Graphical/Views/Buttons$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Graphical/Views/Buttons$4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Graphical/Views/Buttons$5.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Graphical/Views/Buttons$6.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Graphical/Views/Buttons$7.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Graphical/Views/Buttons$8.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Graphical/Views/Buttons$9.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Graphical/Views/Buttons.class" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/out/production/Labb2/Graphical/Views/Buttons.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/src/Graphical/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/src/Graphical/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/src/Graphical/CarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/src/Graphical/CarController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ObjProg Labb2/src/Graphical/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/src/Graphical/Model.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjProg Labb2/src/Graphical/Views/Buttons.java" beforeDir="false" afterPath="$PROJECT_DIR$/ObjProg Labb2/src/Graphical/Views/Buttons.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,9 +49,22 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="CodeWithMe" />
   </component>
-  <component name="RunManager" selected="JUnit.All in Labb2">
+  <component name="RunManager" selected="Application.Application">
+    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Graphical.Application" />
+      <module name="Labb2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Graphical.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="main" />
       <module name="Labb2" />
@@ -99,6 +92,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Application" />
         <item itemvalue="JUnit.All in Labb2" />
         <item itemvalue="Application.main" />
         <item itemvalue="JUnit.TestVehicle.testGasWithoutStart" />

@@ -35,11 +35,6 @@ public class Model {
         return true;
     }
 
-//    public void move(){
-//        for(Wrapper piece : getPieces()){
-//            piece.getVehicle().getMovable().move();
-//        }
-//    }
     public void gas(double amount){
         for(Wrapper piece : getPieces()){
             piece.getVehicle().gas(amount);
@@ -81,7 +76,6 @@ public class Model {
         System.out.println("turbo on!");
         for(Wrapper piece : getPieces()){
             if(piece.hasTurbo()){
-                System.out.println("yes it has turbo");
                 piece.getVehicle().removeFactor(Enum_AccelerationFactor.TURBO);
                 piece.getVehicle().addFactor(Enum_AccelerationFactor.TURBO, 1.25);
             }
@@ -89,9 +83,9 @@ public class Model {
     }
 
     void turnTurboOff(){
+        System.out.println("turbo off!");
         for(Wrapper piece : getPieces()){
             if(piece.hasTurbo()){
-                System.out.println("removing turbo factor");
                 piece.getVehicle().removeFactor(Enum_AccelerationFactor.TURBO);
 
             }
